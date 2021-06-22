@@ -1,0 +1,48 @@
+/*-----------------------------------*/
+/*          Widget Style             */
+/*-----------------------------------*/
+
+.widget{
+  margin-bottom: @fly-widget-margin-bot;
+  color: @fly-primary-color;
+  font-size: @fly-font-size;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+  .widget-title{
+    font-family: @fly-font-family-2;
+    font-size: @fly-widget-title-font-size;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: @fly-widget-title-margin-bot;
+
+    &:after{
+      content: '';
+      width: @fly-widget-title-border-width;
+      height: @fly-widget-title-border-height;
+      background: @fly-widget-title-border-color;
+      display: block;
+      margin: @fly-widget-title-padding-bot 0 0;
+    }
+    span{
+      font-weight: bold;
+    }
+  }
+}
+
+
+/*-----------------------------------*/
+/*           Other Style             */
+/*-----------------------------------*/
+
+@import "widget-newsletter.less";
+@import "widget-search.less";
+@import "widget-categories.less";
+@import "widget-recent-posts.less";
+@import "widget-instagram.less";
+@import "widget-tag-cloud.less";
+@import "widget-recent-comments.less";
+@import "widget-archive.less";
+@import "widget-meta.less";
+@import "widget-calendar.less";

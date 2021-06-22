@@ -1,0 +1,68 @@
+/*-----------------------------------*/
+/*      Schortcode Quick Menu        */
+/*-----------------------------------*/
+
+.fly-quick-nav{
+  .fly-quick-nav-item{
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: @fly-space-md 0;
+    position: relative;
+
+    .fly-quick-nav-icon{
+      color: @fly-quick-menu-text-color;
+      font-size: @fly-quick-menu-icon-size;
+      margin-bottom: @fly-quick-menu-icon-margin-bot;
+    }
+    .fly-quick-nav-before-title{
+      color: @fly-quick-menu-text-color;
+      font-size: @fly-quick-menu-size-before-title;
+      margin-bottom: @fly-quick-menu-before-title-margin-bot;
+    }
+    .fly-quick-nav-title{
+      color: @fly-quick-menu-text-color;
+      font-size: @fly-quick-menu-title-size;
+      margin-bottom: @fly-quick-menu-title-margin-bot;
+    }
+    .fly-quick-nav-icon,
+    .fly-quick-nav-title,
+    .fly-btn-quick-nav,
+    .fly-quick-nav-before-title {
+      position: relative;
+      z-index: 2;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: @fly-quick-menu-bg-hover;
+      .transition(all 0.3s ease);
+      z-index: 1;
+      opacity: 0.2;
+    }
+    &:hover:before{
+      opacity: 0.8;
+    }
+  }
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 768px*/
+@media (max-width: 991px) {
+  .fly-quick-nav .fly-quick-nav-item{
+    padding: ceil(@fly-space-md*0.65) 0;
+  }
+  .fly-quick-nav .fly-quick-nav-item .fly-quick-nav-icon{
+    margin-bottom: ceil(@fly-quick-menu-icon-margin-bot*0.7);
+  }
+  .fly-quick-nav .fly-quick-nav-item .fly-quick-nav-title{
+    margin-bottom: ceil(@fly-quick-menu-title-margin-bot*0.77);
+  }
+}

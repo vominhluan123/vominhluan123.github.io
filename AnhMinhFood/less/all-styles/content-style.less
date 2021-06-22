@@ -1,0 +1,211 @@
+/*-----------------------------------*/
+/*           Layout Style            */
+/*-----------------------------------*/
+
+
+/* Theme Color */
+.fly-theme-color-1{
+  background-color: @fly-primary-color;
+}
+.fly-theme-color-2{
+  background-color: @fly-secondary-color;
+}
+.fly-theme-color-3{
+  background-color: @fly-base-color3;
+}
+.fly-theme-color-4{
+  background-color: @fly-base-color4;
+}
+.fly-theme-color-5{
+  background-color: @fly-base-color5;
+}
+
+/* Size Class */
+.fly-section-height-sm{
+  height: @fly-section-height-sm;
+}
+.fly-section-height-md{
+  height: @fly-section-height-md;
+}
+.fly-section-height-lg{
+  height: @fly-section-height-lg;
+}
+.fly-section-height-auto{
+  height: auto;
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 1024px*/
+@media (max-width: 1199px) {
+  .fly-section-height-sm{
+    height: ceil(@fly-section-height-sm*0.63);
+  }
+  .fly-section-height-md{
+    height: ceil(@fly-section-height-md*0.66);
+  }
+  .fly-section-height-lg{
+    height: ceil(@fly-section-height-lg*0.6);
+  }
+}
+
+/*Screen 768px*/
+@media (max-width: 991px) {
+  .fly-section-height-sm{
+    height: ceil(@fly-section-height-sm*0.61);
+  }
+  .fly-section-height-md{
+    height: ceil(@fly-section-height-md*0.64);
+  }
+  .fly-section-height-lg{
+    height: ceil(@fly-section-height-lg*0.58);
+  }
+}
+
+/*Screen 568px*/
+@media (max-width: 767px) {
+  .fly-section-height-sm{
+    height: ceil(@fly-section-height-sm*0.47);
+  }
+  .fly-section-height-md{
+    height: ceil(@fly-section-height-md*0.47);
+  }
+  .fly-section-height-lg{
+    height: ceil(@fly-section-height-lg*0.4);
+  }
+}
+
+/* Lightbox CSS */
+.pp_pic_holder.dark_square{
+  .pp_nav{
+    position: relative;
+    left: 50%;
+    margin-left: -155px;
+    font-family: @fly-font-family-2;
+    line-height: @fly-font-size + 4;
+    margin-top: 8px;
+
+    .pp_text_devider{
+      color: #fff;
+      color: fade(#fff, 50%);
+      display: inline;
+      margin: 0 10px;
+    }
+    .pp_play{
+      display: none;
+    }
+    .pp_arrow_next,
+    .pp_arrow_previous{
+      text-indent: 0;
+      width: auto;
+      background: none;
+      position: relative;
+      font-size: @fly-font-size - 3;
+      line-height: @fly-font-size + 6;
+      font-weight: bold;
+      color: #fff;
+      color: fade(#fff, 50%);
+      text-transform: uppercase;
+
+      &:hover{
+        color: @fly-base-color3;
+      }
+    }
+    .pp_arrow_previous:before,
+    .pp_arrow_next:after{
+      font-size: 20px;
+      font-family: 'FontAwesome';
+      font-weight: bold;
+      line-height: 20px;
+      vertical-align: top;
+    }
+    .pp_arrow_previous:before{
+      content: '\f104';
+      margin-right: 10px;
+    }
+    .pp_arrow_next:after{
+      content: '\f105';
+      margin-left: 10px;
+    }
+    a.pp_arrow_previous,
+    a.pp_arrow_next{
+      height: auto;
+      overflow: visible;
+      vertical-align: top;
+      display: inline;
+      float: none;
+    }
+    a.pp_arrow_previous{
+      margin-right: 50px;
+    }
+    a.pp_arrow_next{
+      margin-left: 50px;
+    }
+    .currentTextHolder{
+      color: @fly-base-color4;
+      font-size: @fly-font-size - 1;
+      font-weight: bold;
+      display: inline;
+      float: none;
+    }
+  }
+  a.pp_previous,
+  a.pp_next{
+    display: none;
+  }
+  a.pp_close{
+    background: url("../images/lightbox-closebtn.png") no-repeat;
+    width: 23px;
+    top: 53px;
+    right: 30px;
+    opacity: 0.5;
+
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+  .pp_content_container .pp_left{
+    padding-left: 100px;
+  }
+  .pp_top{
+    height: 100px;
+
+    .pp_left,
+    .pp_middle,
+    .pp_right{
+      height: 100px;
+    }
+  }
+  .pp_bottom{
+    height: 50px;
+
+    .pp_left,
+    .pp_middle,
+    .pp_right{
+      height: 50px;
+    }
+  }
+  a.pp_expand,
+  a.pp_contract{
+    right: 110px;
+  }
+  .pp_details{
+    //    text-align: center;
+    .pp_description{
+      margin: 0;
+      display: inline-block !important;
+      position: absolute;
+      left: 0;
+      top: -16px;
+    }
+  }
+}
+
+/* Parallax Effect */
+.parallax{
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

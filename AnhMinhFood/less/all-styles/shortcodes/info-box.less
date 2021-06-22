@@ -1,0 +1,82 @@
+/*-----------------------------------*/
+/*      Shorcodes Info Box           */
+/*-----------------------------------*/
+
+.fly-info-box{
+  text-align: center;
+
+  .fly-info-box-header {
+    .fly-info-box-before-title {
+      font-family: @fly-font-family;
+      font-size: @fly-font-size;
+      font-weight: bold;
+      margin-bottom: @fly-info-box-header-element-margin-bot;
+      position: relative;
+      line-height: @fly-font-size*0.79;
+      letter-spacing: normal;
+
+      &:before,
+      &:after{
+        content: '';
+        width: @fly-info-box-before-title-line-width;
+        height: 1px;
+        display: inline-block;
+        margin: 0 @fly-info-box-before-title-line-margin-right;
+        background: @fly-secondary-color;
+        vertical-align: middle;
+      }
+    }
+    .fly-info-box-icon{
+      font-size: @fly-info-box-icon-font-size;
+      color: @fly-secondary-color;
+      margin-bottom: @fly-info-box-header-element-margin-bot;
+    }
+    .fly-info-box-title{
+      font-family: @fly-font-family-2;
+      font-size: ceil(@fly-font-size-h3*1.37);
+      margin-bottom: @fly-info-box-space-between-block;
+      line-height: @fly-font-size-h3*1.28;
+      letter-spacing: 8px;
+    }
+    .fly-info-box-divider{
+      width: @fly-info-box-divider-width;
+      height: 2px;
+      display: inline-block;
+      margin: (-@fly-info-box-divider-margin) auto @fly-info-box-divider-margin;
+      background: @fly-secondary-color;
+      vertical-align: middle;
+    }
+  }
+  .fly-info-box-image{
+    margin-bottom: @fly-info-box-space-between-block;
+    line-height: 0;
+  }
+  .fly-info-box-content{
+    padding: 0 @fly-info-box-content-padding;
+  }
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 568px*/
+@media (max-width: 767px) {
+  .fly-info-box .fly-info-box-header .fly-info-box-title{
+    font-size: @fly-font-size-h3*1.2;
+    margin-bottom: ceil(@fly-info-box-space-between-block*0.64);
+  }
+  .fly-info-box .fly-info-box-header .fly-info-box-before-title{
+    margin-bottom: ceil(@fly-info-box-header-element-margin-bot*0.8);
+  }
+  .fly-info-box .fly-info-box-content{
+    padding: 0;
+  }
+}
+
+/*Screen 320px*/
+@media (max-width: 479px) {
+  .fly-info-box .fly-info-box-header .fly-info-box-title{
+    font-size: @fly-font-size-h3;
+  }
+}

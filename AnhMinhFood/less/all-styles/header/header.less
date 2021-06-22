@@ -1,0 +1,107 @@
+/*-----------------------------------*/
+/*           Header Style            */
+/*-----------------------------------*/
+
+.fly-header-site{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  text-align: center;
+  padding-top: @fly-header-padding-top;
+
+  &.sticky-menu{
+    padding: @fly-header-sticky-padding-top 0 @fly-header-sticky-padding-bot;
+  }
+}
+
+
+
+/*-----------------------------------*/
+/*           Other Style             */
+/*-----------------------------------*/
+
+@import "nav-menu.less";
+@import "header-logo.less";
+@import "header-type-2.less";
+
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 1680px*/
+@media (max-width: 1680px) {
+  .fly-header-site .fly-site-navigation .fly-nav-menu li{
+    margin-left: @fly-header-nav-item-margin-left*0.84;
+  }
+  .fly-header-site.sticky-menu .fly-nav-menu li{
+    margin-left: @fly-sticky-nav-item-margin-left*0.71;
+  }
+  .fly-header-site .fly-wrap-logo{
+    margin: 0 @fly-logo-margin*0.84;
+  }
+}
+
+/*Screen 1380px*/
+@media (max-width: 1380px) {
+  .fly-header-site .fly-site-navigation .fly-nav-menu li{
+    margin-left: @fly-header-nav-item-margin-left*0.64;
+  }
+  .fly-header-site.sticky-menu .fly-nav-menu li{
+    margin-left: @fly-sticky-nav-item-margin-left*0.56;
+  }
+  .fly-header-site .fly-wrap-logo{
+    margin: 0 @fly-logo-margin*0.58;
+  }
+}
+
+/*Screen 1200px*/
+@media (max-width: 1200px) {
+  .fly-header-site .fly-site-navigation .fly-nav-menu li{
+    margin-left: @fly-header-nav-item-margin-left*0.53;
+  }
+  .fly-header-site.sticky-menu .fly-nav-menu li{
+    margin-left: @fly-sticky-nav-item-margin-left*0.45;
+  }
+  .fly-header-site .fly-wrap-logo{
+    margin: 0 @fly-logo-margin*0.53;
+  }
+}
+
+/*Screen 1024px*/
+@media (max-width: 1199px) {
+  .fly-header-site .fly-site-navigation .fly-nav-menu li{
+    margin-left: @fly-header-nav-item-margin-left*0.32;
+  }
+  .fly-header-site.sticky-menu .fly-nav-menu li{
+    margin-left: @fly-sticky-nav-item-margin-left*0.26; // 35
+  }
+  .fly-header-site .fly-wrap-logo{
+    margin: 0 @fly-logo-margin*0.43;
+  }
+  .fly-header-type-2 .fly-wrap-logo {
+    margin: 0 30px;
+  }
+}
+
+/*Screen 768px*/
+@media (max-width: 991px) {
+  .fly-header-site.fly-header-type-2 .fly-site-navigation,
+  .fly-site-navigation{
+    display: none;
+  }
+  .fly-header-site.fly-header-type-2 .fly-wrap-logo{
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+  .fly-header-site .mmenu-link{
+    display: inline-block;
+  }
+  .fly-header-site.fly-header-type-2,
+  .fly-header-site{
+    padding-top: @fly-header-padding-top*0.2;
+  }
+}

@@ -1,0 +1,403 @@
+/*-----------------------------------*/
+/*         Special Offers            */
+/*-----------------------------------*/
+
+.fly-special-offers,
+.fly-other-offers{
+  .fly-offers-list{
+    overflow: hidden;
+
+    .fly-offer{
+      overflow: hidden;
+      text-align: center;
+      margin-bottom: @fly-speciasl-offers-margin-bot;
+
+      .fly-offers-thumbnail{
+        height: @fly-speciasl-offers-thumb-size;
+        display: block;
+        margin-bottom: @fly-speciasl-offers-thumb-margin-bot;
+        position: relative;
+        overflow: hidden;
+
+        img{
+          width: 100%;
+        }
+        &:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          .transition(opacity 0.3s ease);
+          background: @fly-speciasl-offers-thumb-overlay-color;
+          opacity: 0;
+        }
+        &:hover{
+          &:before{
+            opacity: 0.15;
+          }
+        }
+      }
+      .fly-offers-content{
+        font-family: @fly-font-family-2;
+        padding: 0 @fly-speciasl-offers-content-padding;
+
+        .fly-offers-date{
+          color: @fly-speciasl-offers-date-color;
+          font-size: @fly-speciasl-offers-date-size;
+          text-transform: uppercase;
+          font-weight: 300;
+          letter-spacing: 1px;
+
+          &:after{
+            content: '';
+            display: block;
+            width: @fly-speciasl-offers-divider-width;
+            height: @fly-speciasl-offers-divider-height;
+            background: @fly-speciasl-offers-divider-color;
+            margin: @fly-speciasl-offers-divider-margin auto;
+          }
+        }
+        .fly-offers-title{
+          font-weight: bold;
+          font-size: @fly-speciasl-offers-title-size;
+          line-height: @fly-speciasl-offers-title-size*1.27;
+          text-transform: uppercase;
+          margin-bottom: 0;
+          height: 50px;
+
+          a{
+            display: block;
+            color: @fly-speciasl-offers-title-color;
+
+            &:hover{
+              color: @fly-speciasl-offers-title-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* Special Offers Details */
+  &.fly-special-offers-details{
+    text-align: center;
+
+    /* ==> Offers Details Header */
+    .fly-offers-details-header{
+      .fly-offers-details-date{
+        font-family: @fly-font-family-2;
+        font-size: @fly-speciasl-offers-date-size;
+        color: @fly-speciasl-offers-date-color;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 1px;
+        margin-bottom: @fly-special-offers-details-date-margin;
+      }
+      .fly-offers-details-title{
+        font-weight: bold;
+        font-size: @fly-special-offers-details-title-size;
+        line-height: @fly-special-offers-details-title-height;
+
+        span{
+          font-weight: bold;
+        }
+        &:after{
+          content: '';
+          display: block;
+          width: @fly-speciasl-offers-details-divider-width;
+          height: @fly-speciasl-offers-details-divider-height;
+          background: @fly-speciasl-offers-divider-color;
+          margin: @fly-speciasl-offers-details-divider-margin auto @fly-speciasl-offers-details-divider-margin - 5;
+        }
+      }
+    }
+    /* ==> Offers Details Content */
+    .fly-offers-details-content{
+      padding: 0 @fly-speciasl-offers-content-padding;
+
+      .fly-offers-details-text{
+        margin-bottom: @fly-speciasl-offers-details-content-margin;
+      }
+      .fly-offers-details-thumbnail{
+        margin-bottom: @fly-speciasl-offers-details-thumb-margin;
+      }
+      .fly-offers-details-info{
+        text-align: left;
+        margin-bottom: @fly-space-lg;
+
+        .fly-offers-info-title{
+          border-bottom: 2px solid @fly-base-color2;
+          padding-bottom: ceil(@fly-space-sm*0.29);
+          margin-bottom: ceil(@fly-space-sm*0.52);
+          font-size: ceil(@fly-font-size-h3*0.72);
+        }
+      }
+    }
+    /* ==> Offers Details Meta */
+    .fly-offers-details-meta{
+      .fw-offers-details-loveit{
+        position: relative;
+        color: @fly-speciasl-offers-details-loveit-color;
+        line-height: 1.9em;
+        display: inline-block;
+        margin-bottom: @fly-speciasl-offers-details-loveit-margin;
+
+        >div{
+          display: inline-block;
+        }
+        i{
+          font-size: @fly-speciasl-offers-details-loveit-icon-size;
+        }
+        span{
+          display: block;
+          font-family: @fly-font-family-2;
+          font-size: @fly-speciasl-offers-details-loveit-nr-size;
+          font-weight: bold;
+        }
+        &:hover{
+          color: @fly-speciasl-offers-details-loveit-color-hover;
+        }
+        &:before,
+        &:after{
+          content: '';
+          position: absolute;
+          width: @fly-speciasl-offers-details-loveit-divider-width;
+          height: @fly-speciasl-offers-details-loveit-divider-height;
+          background: @fly-speciasl-offers-details-loveit-color;
+          top: 50%;
+          left: 0;
+          margin-left: -@fly-speciasl-offers-details-loveit-divider-margin;
+        }
+        &:after{
+          right: 0;
+          left: auto;
+          margin-left: auto;
+          margin-right: -@fly-speciasl-offers-details-loveit-divider-margin;
+        }
+      }
+      .fly-offers-details-share-btn{
+        .fly-offers-details-share-title{
+          font-family: @fly-font-family-2;
+          font-weight: 400;
+          font-size: @fly-speciasl-offers-details-share-title;
+          color: @fly-secondary-color;
+          text-transform: uppercase;
+          margin-bottom: @fly-speciasl-offers-details-share-title-margin;
+        }
+        .fly-offers-share{
+          text-transform: uppercase;
+          font-weight: bold;
+          margin: 0 @fly-speciasl-offers-details-share-btn-margin;
+          border: 2px solid transparent;
+          display: inline-block;
+          .transition(all 0.5s ease);
+          padding: 5px 43px;
+
+          &:hover{
+            color: #fff !important;
+          }
+          &.fly-share-facebook{
+            color: #5c6578;
+            border-color: #5c6578;
+
+            &:hover{
+              background: #425d93;
+              border-color: #425d93;
+            }
+          }
+          &.fly-share-twitter{
+            color: #588c9a;
+            border-color: #588c9a;
+
+            &:hover{
+              background: #1bafd8;
+              border-color: #1bafd8;
+            }
+          }
+          &.fly-share-google{
+            color: #956863;
+            border-color: #956863;
+
+            &:hover{
+              background: #c34536;
+              border-color: #c34536;
+            }
+          }
+        }
+        /* ==> Offers Details Divider Share */
+        &:after{
+          content: '';
+          display: block;
+          width: @fly-speciasl-offers-details-divider-width;
+          height: @fly-speciasl-offers-details-divider-height;
+          background: @fly-speciasl-offers-divider-color;
+          margin: @fly-speciasl-offers-details-divider-margin-top auto @fly-speciasl-offers-details-divider-margin-bot;
+        }
+      }
+      /* ==> Offers Details Button Back To List*/
+      .fly-offers-details-back-to-list-btn{
+        padding: 0 17%;
+        .fly-btn{
+          border-color: @fly-secondary-color;
+          color: @fly-secondary-color;
+          display: block;
+
+          &:hover{
+            background: @fly-base-color4;
+            border-color: @fly-base-color4;
+            color: @fly-base-color5;
+          }
+        }
+      }
+    }
+  }
+}
+/* Other Offers */
+.fly-other-offers{
+  margin-left: -(@fly-container-min-width/2)/2;
+  margin-right: -(@fly-container-min-width/2)/2;
+
+  .fly-other-offers-title{
+    font-size: @fly-font-size-h3*0.52;
+    position: relative;
+    margin-bottom: @fly-space-sm*0.9;
+
+    span{
+      font-weight: 800;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 0 30px;
+      background: @fly-body-background;
+      position: relative;
+      z-index: 10;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      height: 1px;
+      background: @fly-secondary-color;
+      left: 15px;
+      right: 15px;
+      top: 50%;
+      margin-top: -1px;
+    }
+  }
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 1024px*/
+@media (max-width: 1199px) {
+  .fly-special-offers .fly-offers-list .fly-offer .fly-offers-thumbnail,
+  .fly-other-offers .fly-offers-list .fly-offer .fly-offers-thumbnail{
+    height: ceil(@fly-speciasl-offers-thumb-size*0.79);
+  }
+  .fly-special-offers.fly-special-offers-details,
+  .fly-other-offers.fly-special-offers-details{
+    padding: 0 15px;
+  }
+  .fly-other-offers{
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/*Screen 768px*/
+@media (max-width: 991px) {
+  .fly-special-offers .fly-offers-list .fly-offer .fly-offers-thumbnail,
+  .fly-other-offers .fly-offers-list .fly-offer .fly-offers-thumbnail{
+    height: ceil(@fly-speciasl-offers-thumb-size*0.58);
+  }
+  .fly-special-offers .fly-offers-list .fly-offer .fly-offers-content .fly-offers-title,
+  .fly-other-offers .fly-offers-list .fly-offer .fly-offers-content .fly-offers-title,
+  .post .fly-post-content .entry-header .entry-title,
+  .post .entry-header .entry-title{
+    font-size: ceil(@fly-speciasl-offers-title-size*0.8);
+  }
+  .fly-special-offers.fly-special-offers-details .fly-offers-details-content .fly-offers-details-info,
+  .fly-other-offers.fly-special-offers-details .fly-offers-details-content .fly-offers-details-info{
+    margin-bottom: ceil(@fly-space-lg*0.8);
+  }
+}
+
+/*Screen 568px*/
+@media (max-width: 767px) {
+  .fly-special-offers.fly-special-offers-details .fly-offers-details-meta .fly-offers-details-share-btn .fly-offers-share,
+  .fly-other-offers.fly-special-offers-details .fly-offers-details-meta .fly-offers-details-share-btn .fly-offers-share,
+  .fly-post-details-meta .fly-post-details-share-btn .fly-offers-share,
+  .fly-post-details-meta .fly-post-details-share-btn .fly-post-share{
+    margin: 0 3px;
+  }
+  .fly-special-offers.fly-special-offers-details .fly-offers-details-meta .fly-offers-details-share-btn:after,
+  .fly-other-offers.fly-special-offers-details .fly-offers-details-meta .fly-offers-details-share-btn:after,
+  .fly-post-details-meta .fly-post-details-share-btn:after{
+    margin: 50px auto;
+  }
+  .fly-special-offers.fly-special-offers-details .fly-offers-details-content .fly-offers-details-thumbnail,
+  .fly-other-offers.fly-special-offers-details .fly-offers-details-content .fly-offers-details-thumbnail{
+    margin-bottom: ceil(@fly-speciasl-offers-details-thumb-margin*0.55);
+  }
+  .fly-special-offers.fly-special-offers-details .fly-offers-details-meta .fw-offers-details-loveit,
+  .fly-other-offers.fly-special-offers-details .fly-offers-details-meta .fw-offers-details-loveit,
+  .fly-post-details-meta .fw-post-details-loveit{
+    margin-bottom: ceil(@fly-speciasl-offers-details-loveit-margin*0.62);
+  }
+  .fly-special-offers.fly-special-offers-details .fly-offers-details-content,
+  .fly-other-offers.fly-special-offers-details .fly-offers-details-content{
+    padding: 0;
+  }
+  .fly-special-offers .fly-offers-list .fly-offer .fly-offers-content .fly-offers-title,
+  .fly-other-offers .fly-offers-list .fly-offer .fly-offers-content .fly-offers-title,
+  .post .fly-post-content .entry-header .entry-title, .post .entry-header .entry-title{
+    height: auto;
+  }
+  .fly-special-offers.fly-special-offers-details .fly-offers-details-content .fly-offers-details-info,
+  .fly-other-offers.fly-special-offers-details .fly-offers-details-content .fly-offers-details-info{
+    margin-bottom: ceil(@fly-space-lg*0.53);
+  }
+}
+
+/*Screen 500px*/
+@media (max-width: 500px) {
+  .fly-special-offers.fly-special-offers-details .fly-offers-details-meta .fly-offers-details-share-btn .fly-offers-share,
+  .fly-other-offers.fly-special-offers-details .fly-offers-details-meta .fly-offers-details-share-btn .fly-offers-share,
+  .fly-post-details-meta .fly-post-details-share-btn .fly-offers-share, .fly-post-details-meta .fly-post-details-share-btn .fly-post-share{
+    padding: 5px 25px;
+  }
+}
+
+/*Screen 320px*/
+@media (max-width: 479px) {
+  .fly-special-offers .fly-offers-list .fly-offer,
+  .fly-other-offers .fly-offers-list .fly-offer{
+    width: 100%;
+  }
+  .fly-special-offers .fly-offers-list .fly-offer .fly-offers-thumbnail,
+  .fly-other-offers .fly-offers-list .fly-offer .fly-offers-thumbnail{
+    height: ceil(@fly-speciasl-offers-thumb-size*0.79);
+  }
+  .fly-special-offers.fly-special-offers-details .fly-offers-details-meta .fly-offers-details-share-btn .fly-offers-share,
+  .fly-other-offers.fly-special-offers-details .fly-offers-details-meta .fly-offers-details-share-btn .fly-offers-share,
+  .fly-post-details-meta .fly-post-details-share-btn .fly-offers-share, .fly-post-details-meta .fly-post-details-share-btn .fly-post-share{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .fly-special-offers.fly-special-offers-details .fly-offers-details-meta .fly-offers-details-back-to-list-btn,
+  .fly-other-offers.fly-special-offers-details .fly-offers-details-meta .fly-offers-details-back-to-list-btn,
+  .fly-post-details-meta .fly-post-details-back-to-list-btn{
+    padding: 0;
+  }
+  .fly-special-offers.fly-special-offers-details .fly-offers-details-header .fly-offers-details-title,
+  .fly-other-offers.fly-special-offers-details .fly-offers-details-header .fly-offers-details-title{
+    font-size: ceil(@fly-special-offers-details-title-size*0.8);
+    line-height: ceil(@fly-special-offers-details-title-height);
+  }
+  .fly-special-offers.fly-special-offers-details .fly-offers-details-content .fly-offers-details-info,
+  .fly-other-offers.fly-special-offers-details .fly-offers-details-content .fly-offers-details-info{
+    margin-bottom: ceil(@fly-space-lg*0.4);
+  }
+}

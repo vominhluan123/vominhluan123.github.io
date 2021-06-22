@@ -1,0 +1,24 @@
+/* Header Type 2 */
+
+.fly-header-site{
+  &.fly-header-type-2{
+    text-align: right;
+    padding-top: @fly-header-type2-padding-top;
+
+    .fly-wrap-logo{
+      display: inline-block;
+      float: left;
+    }
+    .fly-site-navigation{
+      display: inline-block;
+      margin-top: ((@fly-logo-height/2)-(@fly-header-nav-font-size/2))/2;
+
+      .fly-nav-menu li{
+        margin-left: @fly-header-type2-item-margin-left;
+      }
+    }
+    &.sticky-menu{
+      padding-top: @fly-header-sticky-type2-padding-top;
+    }
+  }
+}

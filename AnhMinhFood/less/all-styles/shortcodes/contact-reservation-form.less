@@ -1,0 +1,167 @@
+/*-----------------------------------*/
+/*    Contact & Reservation Form     */
+/*-----------------------------------*/
+
+.fly-wrap-home-reservation-form{
+  position: relative;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: @fly-base-color5;
+    opacity: 0;
+    .transition(all 0.4s ease);
+  }
+  &:hover{
+    &:before{
+      opacity: 0.8;
+    }
+  }
+}
+.fly-wrap-contact-form,
+.fly-wrap-reservation-form{
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  &.fly-form-light-style{
+    color: #fff;
+    .placeholder(@fly-input-font-size, 900, #fff, uppercase, normal);
+
+    input:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+    textarea:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+    .fly-form-icon-title,
+    .fly-contact-form-before-info-title,
+    .fly-reservation-form-before-info-title,
+    .fly-contact-form-info-title,
+    .fly-reservation-form-info-title,
+    .fly-contact-form-info-block,
+    .fly-reservation-form-info-block,
+    .fly-reservation-info {
+      color: #fff;
+    }
+    input,
+    textarea {
+      border-color: #fff;
+      color: #fff;
+
+      &:focus{
+        background-color: #fff;
+        color: @fly-base-color5;
+      }
+    }
+    .fly-contact-form-title-divider,
+    .fly-reservation-form-title-divider {
+      background-color: #fff;
+    }
+    .field-submit input[type="submit"]:hover{
+      background-color: #fff;
+    }
+  }
+  .fly-form-icon-title{
+    font-size: @fly-contact-form-icon-title;
+    margin-bottom: @fly-contact-form-icon-title-margin-bot;
+  }
+  .fly-contact-form-before-info-title,
+  .fly-reservation-form-before-info-title{
+    font-size: @fly-reservation-form-before-info-title;
+    margin-bottom: @fly-reservation-form-before-info-title-margin;
+  }
+  .fly-contact-form-info-title,
+  .fly-reservation-form-info-title{
+    font-family: @fly-font-family-2;
+    font-size: @fly-contact-form-info-title-font-size;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .fly-contact-form-title-divider,
+  .fly-reservation-form-title-divider{
+    display: block;
+    width: @fly-contact-form-divider-width;
+    height: @fly-contact-form-divider-height;
+    background-color: @fly-contact-form-divider-color;
+    margin: @fly-contact-form-divider-margin-top auto @fly-contact-form-divider-margin-bot;
+  }
+  /* Info Block Contact Form */
+  .fly-contact-form-info-block,
+  .fly-reservation-form-info-block{
+    margin-bottom: @fly-contact-form-info-block-margin;
+
+    p{
+      font-size: @fly-font-size + 2;
+      margin-bottom: 0.6em;
+      color: @fly-secondary-color;
+
+      &.fly-contact-email a{
+        color: @fly-contact-form-email-color;
+
+        &:hover{
+          color: @fly-base-color1;
+        }
+      }
+      &.fly-reservation-info{
+        font-size: @fly-font-size;
+      }
+    }
+    .fly-contact-work-program{
+      margin-top: @fly-contact-form-work-program-margin;
+
+      h4{
+        font-weight: 400;
+        font-size: @fly-font-size + 2;
+      }
+    }
+  }
+  /* Contact & Reservation Form */
+  .fly-contact-form,
+  .fly-reservation-form{
+    .fly-contact-title,
+    .fly-reservation-title{
+      font-family: @fly-font-family;
+      font-size: @fly-font-size;
+      font-weight: 400;
+      letter-spacing: normal;
+      margin-bottom: 17px;
+    }
+    .form-info{
+      margin-top: 10px;
+      display: block;
+    }
+  }
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 1024px*/
+@media (max-width: 1199px) {
+  .fly-wrap-contact-form,
+  .fly-wrap-reservation-form{
+    padding: 0 15px;
+  }
+}
+
+/*Screen 320px*/
+@media (max-width: 479px) {
+  .fly-form-col-left .fly-form-inner-col-left,
+  .fly-form-col-right .fly-form-inner-col-left,
+  .fly-form-col-left .fly-form-inner-col-right,
+  .fly-form-col-right .fly-form-inner-col-right,
+  .fly-form-col-left,
+  .fly-form-col-right{
+    width: 100%;
+  }
+  .fly-wrap-reservation-form .fly-reservation-form-info-title{
+    font-size: ceil(@fly-contact-form-info-title-font-size*0.8);
+  }
+}

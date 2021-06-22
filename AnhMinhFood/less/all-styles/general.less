@@ -1,0 +1,185 @@
+/*-----------------------------------*/
+/*         General Styles            */
+/*-----------------------------------*/
+
+body {
+  font-family: @fly-font-family;
+  font-size: @fly-font-size;
+  line-height: @fly-line-height-base;
+  font-weight: 300;
+  color: @fly-font-color;
+  background: @fly-body-background;
+  position: relative;
+  overflow-x: hidden;
+
+}
+
+#page{
+  overflow: hidden;
+}
+
+/* Container Width */
+.container{
+  position: relative;
+}
+.container-min{
+  .container{
+    width: @fly-container-min-width;
+  }
+}
+/*Screen 568px ,,Responsive,,*/
+@media(max-width:767px){
+  .content-area {
+    padding-bottom: 70px;
+  }
+}
+
+section{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  &.parallax{
+    background-position: 50% 0;
+    background-attachment: fixed;
+  }
+}
+
+.ie7 body {background: none; filter:none; font-size: @fly-font-size + 6; color: @fly-base-color1; text-align: center; padding-top: 200px;}
+.ie7 .site {display: none;}
+
+::-moz-selection {
+  background: @fly-base-color4;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: @fly-base-color4;
+  color: #fff;
+  text-shadow: none;
+}
+a {
+  color: @fly-base-color4;
+  .transition(color 0.3s ease);
+  &:hover, &:focus {color: @fly-base-color5; text-decoration: none; outline: none;}
+  &:active {background-color: transparent;}
+}
+
+// Block Align Middle
+.fly-itable {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.fly-icell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+iframe{max-width: 100%;}
+
+img {display: inline-block; max-width: 100%;}
+
+.alpha {margin-left:0 !important;}
+.omega {margin-right:0 !important;}
+
+.margin-bottom-0 {margin-bottom: 0 !important;}
+.margin-bottom-10 {margin-bottom: 10px !important;}
+.margin-bottom-20 {margin-bottom: 20px !important;}
+.margin-bottom-30 {margin-bottom: 30px !important;}
+.margin-bottom-40 {margin-bottom: 40px !important;}
+.margin-bottom-50 {margin-bottom: 50px !important;}
+.margin-bottom-60 {margin-bottom: 60px !important;}
+.margin-bottom-70 {margin-bottom: 70px !important;}
+.margin-bottom-80 {margin-bottom: 80px !important;}
+.margin-bottom-90 {margin-bottom: 90px !important;}
+.margin-bottom-100 {margin-bottom: 100px !important;}
+.margin-bottom-110 {margin-bottom: 110px !important;}
+.margin-bottom-120 {margin-bottom: 120px !important;}
+.margin-bottom-130 {margin-bottom: 130px !important;}
+.margin-bottom-140 {margin-bottom: 140px !important;}
+.margin-bottom-150 {margin-bottom: 150px !important;}
+.margin-bottom-160 {margin-bottom: 160px !important;}
+
+.padding-bottom-0 {padding-bottom: 0 !important;}
+
+/* Loading Spinner */
+.spinner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  margin-left: -(@fly-slider-full-spinner-size/2);
+  margin-top: -2px;
+
+  .line1,
+  .line2,
+  .line3,
+  .line4 {
+    position: absolute;
+    width: @fly-slider-full-spinner-size;
+    height: 4px;
+    background-color: @fly-base-color4;
+    -webkit-animation: spin 1.5s infinite linear;
+    animation: spin 1.5s infinite linear;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+  }
+
+  .line2 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+  }
+
+  .line3 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+  }
+
+  .line4 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+}
+
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 768px*/
+@media (max-width: 991px) {
+  .container-min{
+    .container{
+      width: 100%;
+    }
+  }
+}
+
+/*Screen 568px*/
+@media (max-width: 767px) {
+
+}
+
+/*Screen 500px*/
+@media (max-width: 500px) {
+
+}
+
+/*Screen 320px*/
+@media (max-width: 479px) {
+
+}

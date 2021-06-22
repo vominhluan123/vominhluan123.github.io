@@ -1,0 +1,49 @@
+*** FlyCoffee HTML - Changelog ***
+
+2017.11.15 - version 1.0.5
+- fixed scroll effect
+	js/general.js
+- special offers slider controls mobile fix
+	css/style.css
+- fixed sticky menu on mobile
+	js/general.js
+
+2016.09.04 - version 1.0.4
+-send CF and RF data with ajax
+	ajax_send_contact.php
+	ajax_send_reservation.php
+	contact.html
+	js/general.js
+	reservation.html
+
+2016.08.22 - version 1.0.3
+-minor changes for testimonials on mobile
+	css/style.css
+-minor changes for mobile menu
+	js/general.js
+
+2016.01.11 - version 1.0.2
+-minor changes for window resize for header type 2
+	js/general.js
+-validation for Contact Form and Reservation
+	js/general.js
+
+2015.10.28 - version 1.0.1
+- minor changes for send reservation form
+	index2.html
+	menu.html
+	news-details.html
+	news.html
+	offers-details.html
+	offers.html
+	photo.html
+	reservation.html
+	send-reservation.php
+	story.html
+- minor fixed for responsive
+	js/general.js
+	css/style.css
+	index.html
+
+2015.10.20 - version 1.0
+- First release!

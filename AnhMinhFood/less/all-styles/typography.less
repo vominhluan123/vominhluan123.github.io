@@ -1,0 +1,67 @@
+/*-----------------------------------*/
+/*            Typography             */
+/*-----------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+  margin-bottom: .4em;
+  word-wrap: break-word;
+  font-weight: 700;
+  color: @fly-base-color2;
+  font-family: @fly-font-family-2;
+  letter-spacing: 4px;
+}
+h1 {font-size: @fly-font-size-h1;}
+h2 {font-size: @fly-font-size-h2;}
+h3 {font-size: @fly-font-size-h3;}
+h4 {font-size: @fly-font-size-h4;}
+h5 {font-size: @fly-font-size-h5;}
+h6 {font-size: @fly-font-size-h6;}
+
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span{font-weight: 200;}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {color: @fly-base-color4;}
+h1 a:hover,
+h2 a:hover
+, h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {color: @fly-base-color1;}
+
+a{
+  font-family: @fly-font-family-2;
+  color: @fly-base-color4;
+
+  &:hover{
+    color: @fly-primary-color;
+  }
+}
+
+em {font-style: italic;}
+strong {font-weight: 700;}
+small {font-size: 85%;}
+
+i {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-style: normal;
+}
+p {
+  word-wrap: break-word;
+  margin-bottom: 1.7em;
+}
+@media (max-width: 767px) {p {font-size: @fly-font-size - 1;}}
+
+.lowercase {text-transform: lowercase;}
+.uppercase {text-transform: uppercase;}

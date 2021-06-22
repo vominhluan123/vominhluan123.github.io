@@ -1,0 +1,58 @@
+/*-----------------------------------*/
+/*       Schortcodes Divider         */
+/*-----------------------------------*/
+
+.fly-divider-space{
+  clear: both;
+  width: 100%;
+
+  &.space-sm{
+    height: @fly-space-sm;
+  }
+  &.space-md{
+    height: @fly-space-md;
+  }
+  &.space-lg{
+    height: @fly-space-lg;
+  }
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 768px*/
+@media (max-width: 991px) {
+  .fly-divider-space.space-sm{
+    height: ceil(@fly-space-sm*0.67) !important;
+  }
+  .fly-divider-space.space-md{
+    height: ceil(@fly-space-md*0.67) !important;
+  }
+  .fly-divider-space.space-lg{
+    height: ceil(@fly-space-lg*0.67) !important;
+  }
+}
+
+/*Screen 568px*/
+@media (max-width: 767px) {
+  .fly-divider-space.space-sm{
+    height: ceil(@fly-space-sm*0.47) !important;
+  }
+  .fly-divider-space.space-md{
+    height: ceil(@fly-space-md*0.47) !important;
+  }
+  .fly-divider-space.space-lg{
+    height: ceil(@fly-space-lg*0.47) !important;
+  }
+}
+
+/*Screen 500px*/
+@media (max-width: 500px) {
+
+}
+
+/*Screen 320px*/
+@media (max-width: 479px) {
+
+}

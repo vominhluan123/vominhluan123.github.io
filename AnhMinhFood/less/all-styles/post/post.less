@@ -1,0 +1,188 @@
+/*-----------------------------------*/
+/*           Post Style              */
+/*-----------------------------------*/
+
+.post-list{
+  .post{
+    margin-bottom: @fly-post-margin-bot;
+
+    .fly-post-image,
+    .fly-post-content{
+      width: 48%;
+      height: 320px;
+      display: block;
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+    .fly-post-content{
+      padding: @fly-post-content-padding-top @fly-post-content-padding-lateral 0;
+    }
+    .fly-post-image{
+      .fly-post-thumbnail{
+        position: relative;
+        display: block;
+
+        &:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: @fly-speciasl-offers-thumb-overlay-color;
+          opacity: 0;
+          .transition(opacity 0.3s ease);
+        }
+        &:hover{
+          &:before {
+            opacity: 0.15;
+          }
+        }
+      }
+    }
+    /* Thumbnail left */
+    &.post-thumbnail-left{
+      .fly-post-image{
+        float: left;
+      }
+      .fly-post-content{
+        float: right;
+      }
+    }
+    /* Thumbnail right */
+    &.post-thumbnail-right{
+      .fly-post-image{
+        float: right;
+      }
+      .fly-post-content{
+        float: left;
+      }
+    }
+  }
+}
+.post{
+  .fly-post-content{
+    text-align: center;
+
+    .entry-header{
+      .entry-meta{
+        .fly-post-date{
+          &:extend(.fly-special-offers .fly-offers-list .fly-offer .fly-offers-content .fly-offers-date all);
+          &:after{
+            width: @fly-post-title-divider-width;
+          }
+        }
+      }
+      .entry-title{
+        &:extend(.fly-special-offers .fly-offers-list .fly-offer .fly-offers-content .fly-offers-title all);
+        margin-bottom: 30px;
+
+        &:after{
+          display: none;
+        }
+      }
+    }
+    .entry-content{
+      max-height: 130px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+/* Sidebar Position */
+.fly-sidebar-left{
+  .fly-content-area{
+    float: right;
+  }
+}
+.fly-no-sidebar{
+
+}
+
+/* Navigation */
+.navigation {
+  &.paging-navigation{
+    text-align: center;
+    font-family: @fly-font-family-2;
+    font-size: @fly-font-size*1.15;
+    font-weight: bold;
+
+    .page-numbers{
+      margin: 0 20px;
+      color: lighten(@fly-secondary-color, 20%);
+
+      &.current,
+      &:hover{
+        color: @fly-primary-color;
+      }
+      &.next{
+        margin-left: 10px;
+        font-size: @fly-font-size*1.3;
+      }
+      &.prev{
+        margin-right: 10px;
+        font-size: @fly-font-size*1.3;
+      }
+    }
+    .pagination{
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 768px*/
+@media (max-width: 991px) {
+  .fly-content-area{
+    margin-bottom: @fly-space-md;
+  }
+}
+
+/*Screen 568px*/
+@media (max-width: 767px) {
+  .post-list .post .fly-post-content{
+    padding-top: 5px;
+  }
+  .post .entry-header .entry-meta{
+    margin-bottom: 20px;
+  }
+  .post-list .post .fly-post-image,
+  .post-list .post .fly-post-content{
+    height: auto;
+  }
+  .blog-post-navigation {
+    margin-bottom: 90px !important;
+  }
+}
+
+/*Screen 500px*/
+@media (max-width: 500px) {
+  .post-list .post .fly-post-image,
+  .post-list .post .fly-post-content{
+    width: 100%;
+  }
+  .post-list .post.post-thumbnail-right .fly-post-image,
+  .post-list .post.post-thumbnail-left .fly-post-image,
+  .post-list .post.post-thumbnail-left .fly-post-content,
+  .post-list .post.post-thumbnail-right .fly-post-content{
+    float: none;
+    text-align: center;
+  }
+  .post-list .post .fly-post-image .fly-post-thumbnail{
+    margin-bottom: 10px;
+  }
+  .post-list .post{
+    margin-bottom: ceil(@fly-post-margin-bot*0.85);
+  }
+  .post-list .post .fly-post-content{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .fly-post-details-meta{
+    margin-top: 55px;
+  }
+}

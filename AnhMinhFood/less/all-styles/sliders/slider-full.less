@@ -1,0 +1,156 @@
+/*-----------------------------------*/
+/*        Slider Full Style          */
+/*-----------------------------------*/
+
+.fly-slider-full{
+  position: relative;
+
+  .item{
+    height: 700px;
+    text-align: center;
+    color: @fly-slider-full-text-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+    .container{
+      height: 100%;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url("../images/Home-Slider/bg-transparent-slider.png");
+    }
+    .fly-wrap-text-slider{
+      .fly-slider-title-before,
+      .fly-slider-divider,
+      .fly-slider-title-after{
+        color: @fly-slider-full-text-color;
+      }
+      .fly-slider-title-before{
+        font-family: @fly-font-family-2;
+        font-size: @fly-slider-full-title-before-font-size;
+        line-height: @fly-slider-full-title-before-font-size*1.49;
+        letter-spacing: 8px;
+      }
+      .fly-slider-title-after{
+        font-family: @fly-font-family;
+        font-size: @fly-slider-full-title-after-font-size;
+        line-height: @fly-slider-full-title-after-font-size + 11;
+        font-weight: bold;
+        text-shadow: 1px 1px 0 fade(#000, 30%);
+        letter-spacing: normal;
+      }
+      .fly-slider-divider{
+        width: 50px;
+        height: 2px;
+        background: @fly-slider-full-text-color;
+        display: block;
+        margin: @fly-slider-full-divider-padding-top auto @fly-slider-full-divider-padding-bot;
+      }
+    }
+  }
+  // Carousel Indicators
+  .carousel-indicators{
+    bottom: 45px;
+
+    li {
+      width: 8px;
+      height: 8px;
+      background: fade(#fff, 50%);
+      border: none;
+      margin: 0 3px;
+
+      &.active {
+        width: 8px;
+        height: 8px;
+        background: #fff;
+      }
+    }
+  }
+}
+
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 1380px*/
+@media (max-width: 1380px) {
+  .fly-slider-full .carousel-indicators{
+    bottom: 50px;
+  }
+  .fly-slider-full .item .container{
+    padding-top: 11%;
+  }
+}
+/* Screen 1024px */
+@media(max-width:1199px){
+  .fly-slider-full .item {
+    height: 510px !important;
+    background-size: contain;
+  }
+  .fly-slider-full .carousel-indicators {
+    bottom: 30px;
+  }
+}
+/*Screen 768px*/
+@media (max-width: 991px) {
+  .fly-slider-full .item {
+    height: 432px !important;
+    background-size: contain;
+    background-position: top center;
+  }
+  .fly-slider-full .carousel-indicators {
+    bottom: 20px;
+  }
+  .fly-slider-full .item .fly-wrap-text-slider .fly-slider-title-before{
+    font-size: ceil(@fly-slider-full-title-before-font-size*0.77);
+    line-height: ceil(@fly-slider-full-title-before-font-size*1.15);
+    letter-spacing: 6px;
+  }
+}
+
+/*Screen 568px*/
+@media (max-width: 767px) {
+  .fly-slider-full .item {
+    height: 332px !important;
+    background-size: cover;
+    background-position: top center;
+  }
+  .fly-slider-full .item .fly-wrap-text-slider .fly-slider-title-before{
+    font-size: ceil(@fly-slider-full-title-before-font-size*0.5);
+    line-height: ceil(@fly-slider-full-title-before-font-size*0.7);
+  }
+  .fly-slider-full .item .fly-wrap-text-slider .fly-slider-divider{
+    margin: ceil(@fly-slider-full-divider-padding-top*0.46) auto ceil(@fly-slider-full-divider-padding-bot*0.34);
+  }
+  .fly-slider-full .item .fly-wrap-text-slider{
+    margin-top: 14%;
+  }
+  .fly-slider-full .carousel-indicators{
+    bottom: 20px;
+  }
+  .fly-slider-full .item .container{
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .fly-slider-full .item .fly-wrap-text-slider .fly-slider-title-before{
+    font-size: @fly-slider-full-title-before-font-size*0.46;
+    line-height: @fly-slider-full-title-before-font-size*0.66;
+  }
+}
+
+/*Screen 320px*/
+@media (max-width: 479px) {
+  .fly-slider-full .item .fly-wrap-text-slider .fly-slider-title-before{
+    font-size: @fly-slider-full-title-before-font-size*0.4;
+    line-height: @fly-slider-full-title-before-font-size*0.53;
+  }
+}

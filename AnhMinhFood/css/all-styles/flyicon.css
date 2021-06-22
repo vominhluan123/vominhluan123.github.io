@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'flyicon';
+  src: url('../fonts/flyicon.eot?-xsv1uf');
+  src: url('../fonts/flyicon.eot?#iefix-xsv1uf') format('embedded-opentype'), url('../fonts/flyicon.woff?-xsv1uf') format('woff'), url('../fonts/flyicon.ttf?-xsv1uf') format('truetype'), url('../fonts/flyicon.svg?-xsv1uf#flyicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="flyicon-"],
+[class*=" flyicon-"] {
+  font-family: 'flyicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.flyicon-cutlery:before {
+  content: "\e60a";
+}
+.flyicon-notebook:before {
+  content: "\e60b";
+}
+.flyicon-gift:before {
+  content: "\e60c";
+}
+.flyicon-portait:before {
+  content: "\e60d";
+}
+.flyicon-calendar:before {
+  content: "\e608";
+}
+.flyicon-book:before {
+  content: "\e609";
+}
+.flyicon-coffee:before {
+  content: "\e600";
+}
+.flyicon-desert:before {
+  content: "\e601";
+}
+.flyicon-drink:before {
+  content: "\e602";
+}
+.flyicon-expand:before {
+  content: "\e603";
+}
+.flyicon-mail:before {
+  content: "\e604";
+}
+.flyicon-mail2:before {
+  content: "\e605";
+}
+.flyicon-buzzer:before {
+  content: "\e606";
+}
+.flyicon-paprika:before {
+  content: "\e607";
+}

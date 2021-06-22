@@ -1,0 +1,116 @@
+/*-----------------------------------*/
+/*     Restaurant Menu (HomePage)    */
+/*-----------------------------------*/
+
+.fly-restaurant-menu{
+  height: @fw-restaurant-menu-home-height;
+  text-align: justify;
+  font-size: 0;
+  overflow: hidden;
+
+  &:after{
+    width: 100%;
+    height: 0;
+    content: '';
+    display: inline-block;
+  }
+  .fly-menu-category{
+    padding: 0;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+
+    .fly-menu-content{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      font-family: @fly-font-family-2;
+      color: @fw-restaurant-menu-home-color;
+      text-align: center;
+      background: fade(@fly-base-color5, 30%);
+      .transition(background 0.4s ease);
+
+      i{
+        font-family: 'flyicon';
+        font-size: ceil(@fly-font-size*2.5);
+        margin-bottom: @fw-restaurant-menu-home-icon-margin-bot;
+      }
+      .fly-title-menu{
+        color: @fw-restaurant-menu-home-color;
+        font-size: @fly-font-size-h3 + 5;
+        letter-spacing: 5px;
+        margin-bottom: @fw-restaurant-menu-home-title-margin-bot;
+      }
+      &:hover{
+        background: fade(@fly-base-color5, 70%);
+        cursor: pointer;
+      }
+    }
+    .fly-menu-image-array{
+      height: 100%;
+
+      img{
+        display: none;
+        width: 100%;
+        height: 100%;
+
+        &.active-image{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 1200px*/
+@media (max-width: 1200px) {
+  .fly-restaurant-menu .fly-menu-category .fly-menu-content .fly-title-menu{
+    margin-bottom: ceil(@fw-restaurant-menu-home-title-margin-bot*0.7);
+  }
+  .fly-restaurant-menu .fly-menu-category .fly-menu-content i{
+    margin-bottom: ceil(@fw-restaurant-menu-home-icon-margin-bot*0.7);
+  }
+}
+
+/*Screen 1024px*/
+@media (max-width: 1199px) {
+  .fly-restaurant-menu .fly-menu-category .fly-menu-content i{
+    font-size: ceil(@fly-font-size*1.9);
+    margin-bottom: ceil(@fw-restaurant-menu-home-icon-margin-bot*0.47);
+  }
+  .fly-restaurant-menu .fly-menu-category .fly-menu-content .fly-title-menu{
+    font-size: ceil(@fly-font-size-h3*0.8);
+    margin-bottom: ceil(@fw-restaurant-menu-home-title-margin-bot*0.47);
+  }
+  .fly-restaurant-menu .fly-menu-category .fly-menu-content .fly-btn-md{
+    padding: 7px 40px;
+  }
+}
+/* Screen 568px */
+@media(max-width:767px){
+  .fly-restaurant-menu .fly-menu-category .fly-menu-content i{
+    font-size: ceil(@fly-font-size*2.5);
+    margin-bottom: @fw-restaurant-menu-home-icon-margin-bot;
+  }
+  .fly-restaurant-menu .fly-menu-category .fly-menu-content .fly-title-menu{
+    font-size: @fly-font-size-h3;
+    margin-bottom: @fw-restaurant-menu-home-title-margin-bot;
+  }
+}
+/* Screen 320px */
+@media(max-width:479px){
+  .fly-restaurant-menu .fly-menu-category .fly-menu-content i{
+    font-size: ceil(@fly-font-size*1.9);
+    margin-bottom: ceil(@fw-restaurant-menu-home-icon-margin-bot*0.47);
+  }
+  .fly-restaurant-menu .fly-menu-category .fly-menu-content .fly-title-menu{
+    font-size: ceil(@fly-font-size-h3*0.8);
+    margin-bottom: ceil(@fw-restaurant-menu-home-title-margin-bot*0.47);
+  }
+}

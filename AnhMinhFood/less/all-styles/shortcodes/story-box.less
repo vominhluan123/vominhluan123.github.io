@@ -1,0 +1,38 @@
+/*-----------------------------------*/
+/*     Shorcodes Story Section       */
+/*-----------------------------------*/
+
+.fly-story-box{
+  &:extend(.fly-info-box all);
+
+  .fly-story-box-header{
+    .fly-story-box-title{
+      &:extend(.fly-info-box .fly-info-box-header .fly-info-box-title all);
+      font-size: @fly-font-size-h3*0.9;
+      letter-spacing: 4px;
+      margin-bottom: 0;
+    }
+    .fly-story-box-divider{
+      width: @fly-story-box-divider-width;
+      height: 2px;
+      display: inline-block;
+      margin: @fly-story-box-divider-margin auto;
+      background: @fly-secondary-color;
+      vertical-align: middle;
+    }
+  }
+  .fly-story-box-content{
+    &:extend(.fly-info-box .fly-info-box-content all);
+  }
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 320px*/
+@media (max-width: 479px) {
+  .fly-story-box .fly-story-box-header .fly-story-box-divider{
+    margin: ceil(@fly-story-box-divider-margin*0.6) auto;
+  }
+}

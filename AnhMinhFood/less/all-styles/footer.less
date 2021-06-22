@@ -1,0 +1,99 @@
+/*-----------------------------------*/
+/*          Footer Style             */
+/*-----------------------------------*/
+
+.fly-site-footer{
+  background-color: @fly-footer-content-bg;
+  color: @fly-base-color3;
+
+  .fly-footer-content{
+    width: @fly-footer-content-width;
+    margin: 0 auto;
+    text-align: center;
+    color: @fly-base-color3;
+
+    .widget{
+      margin-bottom: @fly-widget-margin-bot*1.77;
+    }
+    .fly-footer-logo{
+      display: inline-block;
+      margin-bottom: @fly-footer-logo-margin-bot;
+    }
+    .fly-footer-info{
+      font-family: @fly-font-family-2;
+      font-size: @fly-font-size - 4;
+      text-transform: uppercase;
+      color: @fly-base-color3;
+      font-weight: 900;
+      letter-spacing: 3px;
+      margin-bottom: @fly-footer-info-margin-bot;
+
+      a{
+        color: @fly-base-color3;
+
+        &:hover{
+          color: @fly-base-color4;
+        }
+      }
+    }
+    .fly-social{
+      .fly-social-link {
+        margin: 0 10px;
+        color: @fly-base-color3;
+        font-size: @fly-footer-social-link-size;
+
+        &:hover {
+          color: @fly-base-color4;
+        }
+      }
+    }
+  }
+  .fly-footer-copyright{
+    background: darken(@fly-footer-copyright-bg, 3%);
+    padding: @fly-footer-copyright-padding 0;
+
+    .fly-copyright-text{
+      font-family: @fly-font-family-2;
+      font-size: @fly-font-size - 4;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-align: center;
+      text-transform: uppercase;
+      color: @fly-base-color3;
+      padding: 0 15px;
+
+      a{
+        color: @fly-base-color3;
+
+        &:hover{
+          color: @fly-base-color4;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 1024px*/
+@media (max-width: 1199px) {
+  .fly-site-footer .fly-footer-content{
+    width: ceil(@fly-footer-content-width*1.09);
+  }
+}
+
+/*Screen 568px*/
+@media (max-width: 767px) {
+  .fly-site-footer .fly-footer-content{
+    width: 100%;
+  }
+}
+
+/*Screen 320px*/
+@media (max-width: 479px) {
+  .fly-site-footer .fly-footer-content{
+    padding: 0 15px;
+  }
+}

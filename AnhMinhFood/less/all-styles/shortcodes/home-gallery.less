@@ -1,0 +1,100 @@
+/*-----------------------------------*/
+/*     Shorcodes Home Gallery        */
+/*-----------------------------------*/
+
+.fly-home-gallery{
+  overflow: hidden;
+
+  .fly-home-gallery-col{
+    height: 100%;
+    padding: 0;
+
+    .fly-home-gallery-block{
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      .fly-home-gallery-overlay{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        font-size: @fly-home-gallery-overlay-font-size;
+        font-weight: 300;
+        color: @fly-home-gallery-overlay-icon-color;
+        background: fade(@fly-home-gallery-overlay-color, 70%);
+        opacity: 0;
+        .transition(all 0.3s ease);
+      }
+      &:hover{
+        .fly-home-gallery-overlay{
+          opacity: 1;
+        }
+      }
+      img{
+        display: block;
+      }
+    }
+    .fly-home-gallery-block-title{
+      background-color: @fly-home-gallery-title-block-bg;
+      text-align: center;
+
+      .fly-home-gallery-before-title{
+        &:extend(.fly-info-box .fly-info-box-header .fly-info-box-before-title all);
+      }
+      .fly-home-gallery-title{
+        &:extend(.fly-info-box .fly-info-box-header .fly-info-box-title all);
+      }
+      .fly-home-gallery-before-title,
+      .fly-home-gallery-title{
+        color: @fly-base-color4;
+        margin-bottom: @fly-home-gallery-title-margin-bot;
+      }
+    }
+  }
+  // Size height image
+  .fly-home-gallery-height-md{
+    height: @fly-home-gallery-height-md;
+  }
+  .fly-home-gallery-height-lg{
+    height: @fly-home-gallery-height-lg;
+  }
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 1024px*/
+@media (max-width: 1199px) {
+  .fly-home-gallery .fly-home-gallery-col .fly-home-gallery-block-title .fly-home-gallery-title{
+    font-size: @fly-font-size-h3;
+  }
+  .fly-home-gallery .fly-home-gallery-col .fly-home-gallery-block-title .fly-home-gallery-before-title,
+  .fly-home-gallery .fly-home-gallery-col .fly-home-gallery-block-title .fly-home-gallery-title{
+    margin-bottom: ceil(@fly-home-gallery-title-margin-bot*0.52);
+  }
+}
+
+/*Screen 768px*/
+@media (max-width: 991px) {
+  .fly-home-gallery .fly-home-gallery-height-md {
+    height: 250px;
+  }
+  .fly-home-gallery .fly-home-gallery-height-lg {
+    height: 500px;
+  }
+}
+
+/*Screen 568px*/
+@media (max-width: 767px) {
+  .fly-home-gallery .fly-home-gallery-col .fly-home-gallery-block,
+  .fly-home-gallery .fly-home-gallery-col .fly-home-gallery-block-title{
+    height: 320px;
+  }
+}

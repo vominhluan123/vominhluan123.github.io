@@ -1,0 +1,223 @@
+/*-----------------------------------*/
+/*      Slider Special Offers        */
+/*-----------------------------------*/
+
+.fly-wrap-slider-special-offers{
+  .fly-slider-special-offers{
+    position: relative;
+
+    li{
+      width: @fly-slider-special-offers-item;
+      height: 540px;
+      float: left;
+      display: block;
+      text-align: center;
+      position: relative;
+      background-size: 100% 70%;
+      background-repeat: no-repeat;
+
+      .fly-wrap-offers{
+        display: block;
+        height: 100%;
+        position: relative;
+
+        &:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: @fly-speciasl-offers-thumb-overlay-color;
+          opacity: 0;
+          .transition(opacity 0.3s ease);
+        }
+        &:hover{
+          &:before{
+            opacity: 0.15;
+          }
+        }
+        .fly-content-offers-slider{
+          font-family: @fly-font-family-2;
+          background: @fly-special-offers-slider-content-bg;
+          height: 180px;
+          padding: 0 39px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+
+          .fly-date-offers{
+            font-size: @fly-font-size;
+            font-weight: 400;
+            color: @fly-secondary-color;
+            text-transform: uppercase;
+          }
+          .fly-offers-title{
+            font-weight: bold;
+            font-size: @fly-font-size + 3;
+            line-height: @fly-font-size*1.86;
+            color: @fly-primary-color;
+            letter-spacing: 3px;
+          }
+          .fly-offers-separator{
+            width: 20px;
+            height: 2px;
+            background-color: @fly-base-color5;
+            display: block;
+            margin: 15px auto;
+          }
+        }
+      }
+    }
+    .fly-offers-slider-control{
+      display: inline-block;
+      width: @fly-offers-slider-control-width;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -320px;
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: fade(@fly-base-color5, 60%);
+      }
+      .fly-slider-control-wrap-title{
+        position: relative;
+        z-index: 10;
+        color: @fly-base-color3;
+        padding-top: 15%;
+
+        h2,
+        h3{
+          color: @fly-base-color3;
+        }
+        .fly-slider-control-title-before{
+          font-family: @fly-font-family;
+          font-size: @fly-font-size;
+          font-weight: bold;
+          position: relative;
+          line-height: normal;
+          letter-spacing: normal;
+          margin-bottom: 40px;
+
+          &:before,
+          &:after{
+            content: '';
+            width: @fly-info-box-before-title-line-width;
+            height: 1px;
+            display: inline-block;
+            margin: 0 5px;
+            background: @fly-base-color3;
+            vertical-align: middle;
+          }
+        }
+        .fly-slider-control-title-after{
+          font-size: @fly-font-size-h3*1.6;
+          line-height: @fly-font-size-h3*1.4;
+          text-transform: uppercase;
+          margin-bottom: 47px;
+        }
+        .fly-special-offers-btn{
+          margin-bottom: 75px;
+        }
+      }
+      .fly-wrap-nav-slider{
+        .prev,
+        .next{
+          font-size: @fly-font-size*1.43;
+          color: @fly-base-color3;
+          margin: 0 17px;
+          position: relative;
+
+          &:hover{
+            color: @fly-base-color4;
+          }
+          &:active{
+            top: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 1380px*/
+@media (max-width: 1380px) {
+
+}
+
+/*Screen 1024px*/
+@media (max-width: 1199px) {
+  .fly-wrap-slider-special-offers .fly-slider-special-offers .fly-offers-slider-control{
+    width: ceil(@fly-offers-slider-control-width*0.82);
+    margin-left: ceil(-(@fly-offers-slider-control-width*0.82)/2);
+  }
+  .fly-wrap-slider-special-offers .fly-slider-special-offers li{
+    width: ceil(@fly-slider-special-offers-item*0.81);
+    height: 500px;
+  }
+  .fly-wrap-slider-special-offers .fly-slider-special-offers li .fly-wrap-offers .fly-content-offers-slider{
+    padding: 0 20px;
+  }
+}
+
+/*Screen 768px*/
+@media (max-width: 991px) {
+  .fly-wrap-slider-special-offers .fly-slider-special-offers .fly-offers-slider-control{
+    width: ceil(@fly-offers-slider-control-width*0.41);
+    margin-left: ceil(-(@fly-offers-slider-control-width*0.41)/2);
+  }
+  .fly-wrap-slider-special-offers .fly-slider-special-offers li{
+    height: 450px;
+  }
+}
+
+/*Screen 568px*/
+@media (max-width: 767px) {
+  .fly-wrap-slider-special-offers .fly-slider-special-offers li{
+    width: ceil(@fly-slider-special-offers-item*0.78);
+  }
+  .fly-wrap-slider-special-offers .fly-slider-special-offers .fly-offers-slider-control{
+    margin-left: auto;
+    left: 40px;
+  }
+  .fly-wrap-slider-special-offers .fly-slider-special-offers .fly-offers-slider-control .fly-slider-control-wrap-title .fly-slider-control-title-after{
+    font-size: ceil(@fly-font-size-h3*1.4);
+  }
+}
+
+/*Screen 500px*/
+@media (max-width: 500px) {
+  .fly-wrap-slider-special-offers .fly-slider-special-offers .fly-offers-slider-control{
+    width: floor(@fly-offers-slider-control-width*0.38);
+    left: 15px;
+  }
+  .fly-wrap-slider-special-offers .fly-slider-special-offers li{
+    width: ceil(@fly-slider-special-offers-item*0.76);
+  }
+}
+
+/*Screen 320px*/
+@media (max-width: 479px) {
+  .fly-wrap-slider-special-offers .fly-slider-special-offers .fly-offers-slider-control{
+    display: none;
+
+  }
+  .fly-wrap-slider-special-offers .fly-slider-special-offers li .fly-wrap-offers .fly-content-offers-slider .fly-offers-title{
+    font-size: @fly-font-size;
+  }
+}

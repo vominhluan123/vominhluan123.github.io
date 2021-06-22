@@ -1,0 +1,36 @@
+/*-----------------------------------*/
+/*             Buttons               */
+/*-----------------------------------*/
+
+.fly-btn{
+  font-family: @fly-font-family-2;
+  font-size: @fly-font-size;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: normal;
+  box-shadow: none;
+  background: none;
+  font-weight: 900;
+  display: inline-block;
+  border: 2px solid @fly-base-color1;
+  .transition(all 0.4s ease-in-out);
+}
+
+// Buttons Size
+.fly-btn-sm{
+  padding: @fly-button-size-sm;
+  font-size: @fly-font-size - 3;
+}
+.fly-btn-md{
+  padding: @fly-button-size-md;
+  font-size: @fly-font-size - 2;
+}
+.fly-btn-lg{
+  padding: @fly-button-size-lg;
+  font-size: @fly-font-size;
+}
+
+
+// Button Type
+@import "button-type1.less";
+@import "button-type2.less";

@@ -1,0 +1,90 @@
+/*-----------------------------------*/
+/*        Shorcodes Section          */
+/*-----------------------------------*/
+
+.fly-section-image{
+  position: relative;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .container{
+    position: relative;
+    z-index: 11;
+    display: table;
+    height: 100%;
+    padding-top: @fly-header-padding-top*2;
+
+    .row{
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  &.fly-section-height-auto{
+    .row{
+      padding: 7% 0 5%;
+    }
+  }
+  .fly-section-image-title-before{
+    &:extend(.fly-info-box .fly-info-box-header .fly-info-box-before-title all);
+    color: @fly-base-color3;
+
+    &:before,
+    &:after{
+      background: @fly-base-color3;
+    }
+  }
+  .fly-section-image-title-after{
+    &:extend(.fly-info-box .fly-info-box-header .fly-info-box-title all);
+    color: @fly-base-color3;
+    margin-bottom: @fly-info-box-space-between-block*0.12;
+  }
+  &.fly-header-image{
+
+  }
+}
+.fly-section-overlay:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: fade(@fly-section-transparent-bg, 70%);
+}
+
+/*-----------------------------------*/
+/*           Responsive              */
+/*-----------------------------------*/
+
+/*Screen 768px*/
+@media (max-width: 991px) {
+  .fly-section-image .container{
+    padding-top: ceil(@fly-header-padding-top*0.81);
+  }
+  .fly-section-image.fly-section-height-auto .row {
+    padding: 10% 0 5%;
+  }
+}
+
+/*Screen 568px*/
+@media (max-width: 767px) {
+  .fly-section-image .container{
+    padding-top: ceil(@fly-header-padding-top*1.18);
+  }
+  .fly-section-image .fly-section-image-title-before{
+    margin-bottom: 28px;
+  }
+  .fly-section-image.fly-section-height-auto .row{
+    padding: 20% 0 10%;
+  }
+}
+
+/*Screen 320px*/
+@media (max-width: 479px) {
+  .fly-section-image .container{
+    padding-top: ceil(@fly-header-padding-top*1.25);
+  }
+}

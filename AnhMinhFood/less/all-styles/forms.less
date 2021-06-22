@@ -1,0 +1,309 @@
+/*-----------------------------------*/
+/*       Forms & Form Elements       */
+/*-----------------------------------*/
+
+.placeholder(@fly-input-font-size, 900, lighten(@fly-base-color2, 20%), uppercase, normal); // font-size, font-weight, color, text-transform, font-style
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+
+input,
+textarea,
+input[type="submit"]:focus,
+button:focus {
+  outline: none;
+}
+select.select-styled {visibility: hidden;}
+
+label, input, button, select, textarea {
+  vertical-align: top;
+  margin: 0;
+  .border-radius(0);
+  font-size: inherit;
+  line-height: normal;
+  outline: none;
+}
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="email"],
+textarea,
+.field-select {
+  border: 2px solid @fly-input-border-color;
+  background-color: @fly-input-color;
+  padding:0 16px;
+  font-family: @fly-font-family-2;
+  letter-spacing: 2px;
+  font-size: @fly-input-font-size;
+  font-weight: @fly-input-font-weight;
+  color: @fly-input-font-color;
+  width: 100%;
+  height: @fly-input-height;
+  margin: 0;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+textarea {
+  padding: 14px 16px;
+  height: @fly-textarea-height;
+  resize: vertical;
+  overflow: auto;
+  text-transform: none;
+}
+.ie8 input[type="text"],
+.ie8 input[type="password"],
+.ie8 input[type="search"],
+.ie8 input[type="url"],
+.ie8 input[type="email"] {
+  line-height: @fly-input-height;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: @fly-input-border-color-focus;
+}
+
+.btn:active, .btn.active{
+  box-shadow: none;
+}
+
+.fly-form-col-left,
+.fly-form-col-right{
+  width: 49.3%;
+  float: left;
+
+  .fly-form-inner-col-left,
+  .fly-form-inner-col-right{
+    width: 48.6%;
+    float: left;
+  }
+  .fly-form-inner-col-right{
+    float: right;
+  }
+}
+
+.fly-form-col-right{
+  float: right;
+}
+
+.field-text,
+.field-select {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.field-radio,
+.field-checkbox{
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.field-submit{
+  input[type="submit"]{
+    &:extend(.fly-btn all, .fly-btn-1.fly-btn-color-2 all, .fly-btn-md all);
+    width: 100%;
+    text-transform: uppercase;
+    height: @fly-input-height;
+    font-size: @fly-font-size;
+
+    &:hover {
+      &:extend(.fly-btn-1:hover all, .fly-btn-1:hover.fly-btn-color-1 all);
+    }
+  }
+}
+
+.label-title {
+  display: inline-block;
+  font-size: @fly-input-font-size;
+  font-weight: @fly-input-font-weight;
+  color: @fly-label-font-color;
+  text-transform: uppercase;
+  cursor: default;
+  margin-bottom: 8px;
+}
+
+/* Login Form (widget) */
+.widget.widget_login{
+  .loginform{
+    .placeholder(@fly-font-size, 400 , @fly-base-color1, normal, normal);
+    p{
+      margin-bottom: 18px;
+
+      input{
+        height: @fly-input-height;
+        .border-radius(0);
+        font-family: @fly-font-family;
+        font-size: @fly-font-size;
+        font-weight: 400;
+        color: @fly-base-color1;
+        background: #f2f2f2;
+      }
+      input:focus::-webkit-input-placeholder {
+        color: transparent;
+      }
+      &.submit{
+        display: inline-block;
+
+        .btn-login{
+          background: @fly-base-color2;
+          border: 1px solid @fly-base-color2;
+          padding: 8px 35px;
+          height: auto;
+          color: #fff;
+          font-weight: bold;
+          font-size: @fly-font-size;
+          text-transform: uppercase;
+
+          &:hover{
+            background: none;
+            color: @fly-base-color2;
+          }
+        }
+      }
+    }
+    .forget_password {
+      display: inline-block;
+      float: right;
+      margin-top: 7px;
+    }
+  }
+}
+
+/* Select */
+.field-select{
+  overflow: visible;
+  height: @fly-input-height;
+  padding: 0;
+
+  .selectize-control{
+    height: ceil(@fly-input-height*0.9);
+
+    .selectize-input{
+      height: ceil(@fly-input-height*0.9);
+      line-height: ceil(@fly-input-height*0.9);
+      padding-top: 0;
+      padding-bottom: 0;
+      box-shadow: none;
+      border: none;
+
+      .item{
+        font-family: @fly-font-family-2;
+        letter-spacing: 2px;
+        font-size: @fly-input-font-size;
+        font-weight: @fly-input-font-weight;
+        color: @fly-input-font-color;
+        text-overflow: ellipsis;
+      }
+      input{
+        height: ceil(@fly-input-height*0.9);
+        line-height: ceil(@fly-input-height*0.9);
+        top: 2px;
+      }
+    }
+    .selectize-dropdown{
+      z-index: 999;
+      border-radius: 0;
+    }
+  }
+}
+
+/* Custom CheckBox  & Radio */
+/* Styled Checkboxes, Radios */
+/*-----------------------------------*/
+.custom-checkbox,
+.custom-radio {
+  position: relative;
+}
+.custom-checkbox::selection,
+.custom-radio::selection {
+  background: transparent;
+  color: inherit;
+}
+.custom-checkbox input,
+.custom-radio input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.custom-checkbox label,
+.custom-radio label {
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: @fly-base-color1;
+  line-height: 17px;
+  padding: 0 0 0 23px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  min-height: 17px;
+}
+.custom-checkbox label::selection,
+.custom-radio label::selection {
+  background: transparent;
+  color: inherit;
+}
+.custom-checkbox label.focus,
+.custom-radio label.focus {
+  outline: none;
+}
+.custom-checkbox label:before,
+.custom-radio label:before,
+.custom-checkbox label:after,
+.custom-radio label:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.custom-checkbox label:before,
+.custom-radio label:before {
+  width: 17px;
+  height: 17px;
+  border: 1px solid @fly-base-color1;
+  .border-radius(3px);
+}
+.custom-checkbox label.checked:after,
+.custom-radio label.checked:after {
+  width: 9px;
+  height: 9px;
+  margin: 4px;
+  background-color: @fly-base-color2;
+  .border-radius(2px);
+}
+.custom-radio label:before,
+.custom-radio label.checked:after {
+  border-radius: 50%;
+}
+@media (max-width: 991px) {
+  .custom-checkbox label,
+  .custom-radio label {
+    font-size: 11px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
