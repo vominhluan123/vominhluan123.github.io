@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/db0786b046.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(window).scroll(function(){
+			if (this.scrollY > 20){
+				$(".nav").addClass("sticky");
+				$(".go-top").fadeIn();
+			}
+			else{
+				$(".nav").removeClass("sticky");
+				$(".go-top").fadeOut();
+			}
+		});
+		$(".go-top").click(function(){
+			$('html,body').animate({scrollTop: 0},800);
+		});
+		$('.menu').click(function(){
+			$(this).toggleClass("active");
+			$(".menu-nav").toggleClass("active");
+		});
+		
+	});
+	$(document).ready(function(){
+		$("#btn").click(function(){
+			$('.fa-chevron-up').toggleClass('clicked');
+			$('.bxh-truyen').toggle(1500);
+		});
+	});
+
+</script>
+</head>
+
+
+<style type="text/css">
+    *{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+    font-family: sans-serif;
+	}
+	body
+	{
+		background-color: #000;
+    
+	}
+  html
+  {
+   scroll-behavior: smooth;
+  }
+     .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+    .swiper-slide img
+    {
+    	width: 100%;
+    	
+    }
+	.nav
+	{
+		background: pink;
+		transition: .3s linear;
+		position: sticky;
+		top: 0px;
+		z-index: 999;
+	}
+	.container
+	{
+		padding: 20px 0;
+	}
+	.nav .container
+	{
+		display: flex;
+		align-items: center; 
+		justify-content: space-between;
+	}
+	.logo
+	{
+		width: 150px;
+		height: 35px;
+		background-image: url(hinh/logo.png);
+		background-size: cover;
+    cursor: pointer;
+	}
+	.menu
+	{
+		background: none;
+		width: 30px;
+		border: none;
+		cursor: pointer;
+		position: relative;
+		z-index: 999;
+    display: none;
+		outline: none !important;
+	}
+	.menu span
+	{
+		position: relative;
+		display: block;
+		height: 3px;
+		background-color: #fff;
+		margin: 6px 0;
+		transition: .3s linear;
+		position: relative;
+	}
+	.menu-nav a
+	{
+		color: #fff;
+		font-size: 24px;
+		margin-left: 30px;
+		transition: .3s linear;
+		text-decoration: none;
+	}
+	.menu-nav a:hover
+	{
+		color: #ff0;
+	}
+	.search-box 
+	{
+		background-color: #fff;
+		border-radius: 45px;
+		padding: 5px;
+	}
+	.search-box input
+	{
+		border: none;
+		outline: none;
+		background: none;
+		width: 250px;
+	}
+	.search-btn
+	{
+		color: pink;
+		align-items: center;
+		justify-content: center;
+	}
+	.search-btn:hover
+	{
+		color: #ff0;
+	}
+	.img
+	{
+		background: url(hinh/slider1.jpeg) no-repeat center;
+		width: 100%;
+		height: 400px;
+		background-size: cover;
+		margin-top: 10px;
+	}
+	.sticky 
+	{
+		width: 100%;
+    background-color: #000;
+		padding: 15px 10px 0;
+	}
+	.sticky .menu-nav a
+	{
+		color: pink;
+	}
+	.sticky .menu-nav a:hover
+	{
+		color: #ff0 !important;
+	}
+	.sticky .menu span
+	{
+		background-color: pink;
+	}
+	.sticky .search-box
+	{
+		background-color: #ff0;
+	}
+	.sticky .search-btn:hover
+	{
+		color: #000;
+	}
+	.ten2
+{
+ 
+  margin-top: 25px;
+  width: 100%;
+  color: #e48e2c;
+
+}
+ 
+ .ten2 h3 
+ {
+  font-size: 30px;
+  margin-bottom: 25px;
+ }
+ .ten2 a
+ {
+  text-decoration: none;
+  color: #e48e2c;
+ }
+ .ten2 a:hover
+ {
+color: pink;
+ }
+ .danhsach-manga
+{
+  width:  100%;
+  border:0.5px solid red;
+  border-radius: 5px;
+  padding:15px;
+  margin-bottom: 5px;
+}
+.img1 img
+{
+  max-width: 100%;
+  margin: 5px;
+  height: auto;
+}
+.tieude h2
+{
+  
+  font-size: 25px;
+  margin-top: 5px;
+ color: #e48e2c;
+
+
+}
+.tieude h2:hover
+{
+color: pink;
+}
+.tieude a 
+{
+  text-decoration: none;
+}
+.nhomdich 
+{
+  width: 98.5%;
+  background-color: #ccc;
+  margin-right: 5px;
+  padding: 5px;
+}
+.nhomdich span
+{
+  color: #e48e2c;
+  font-size: 20px;
+  padding: 5px;
+}
+.theloai
+{
+  display: flex;
+
+}
+.theloai .y
+{
+  margin: 5px;
+  color: #e48e2c;
+  background-color: red;
+  padding:5px;
+  border-radius: 5px;
+
+}
+.noidung
+{
+ height: 22px;
+}
+.noidung p
+{
+  padding-left:5px;
+  color: #e48e2c;
+  font-size: 25px;
+}
+.noidung-truyen p
+{
+  padding-left: 5px;
+  margin-top: 15px;
+  color: #e48e2c;
+}
+.chap
+{
+  margin-top: 15px;
+
+}
+.chap p
+{
+  color: #e48e2c;
+  font-size: 15px;
+
+}
+.chap a
+{
+  text-decoration: none;
+}
+.benphai
+{
+  background-color:pink;
+  border-radius: 2px;
+  padding: 5px;
+}
+.bxh
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bxh button
+{
+  background: none;
+  outline: none;
+  border: none;
+}
+.bxh h3
+{
+  color: #fff;
+}
+.bxh i
+{
+  color: #fff;
+  font-size: 34px;
+}
+.clicked
+{
+  transform: rotate(180deg);
+}
+.bxh i:hover
+{
+  color: #e48e2c;
+}
+.bxh-truyen
+{
+  width: 100%
+  padding: 5px;
+  background-color: #ccc;
+  margin: 5px;
+}
+
+.bxh-truyen ul
+{
+  list-style: none;
+  padding-left: 15px;
+}
+.bxh-truyen ul .so1
+{
+  color: #f88379;
+  font-size: 80px;
+}
+.bxh-truyen ul .so2
+{
+  color: #5d9ee1;
+  font-size: 80px;
+}
+.bxh-truyen ul .so3
+{
+  font-size: 80px;
+  color: #0ad48b;
+}
+.bxh-truyen ul .so4
+{
+  font-size: 80px;
+  color: #707070;
+}
+.bxh-truyen ul .so5
+{
+  font-size: 80px;
+  color: #707070;
+}
+.sua
+{
+  display: flex;
+}
+.imgbox
+ {
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+ }
+.imgbox img
+{
+  width: 100px;
+  height: 150px;
+} 
+.title
+{
+  padding: 0 25px 25px 25px;
+}
+.title span
+{
+  color: #e48e2c;
+  font-weight: bold;
+}
+.img-cuoi img
+{
+  width: 150px;
+}
+#tieu-de-cuoi
+{
+  margin-top: 10px;
+  padding: 10px 0;
+}
+.cuoi-giua
+{
+	display: flex;
+	 justify-content: center;
+ 	 align-items: center;
+}
+.cuoi-giua a
+{
+  text-decoration: none;
+}
+.cuoi-cung
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.cuoi-cung a
+{
+	margin-left: 5px;
+}
+.daugach
+{
+width: 1px;
+height: 24px;
+display: inline-block;
+background-color: #F88379;
+margin: 0px 10px;
+}
+.text1
+{
+	margin-top: 5px;
+}
+
+	.go-top{
+	position: fixed;
+	z-index: 999;
+	bottom: 40px;
+	right: 40px;
+	width: 40px;
+	height: 40px;
+	border: none;
+	border-radius: 6px;
+	background-color: pink;
+	cursor: pointer;
+	color: #fff;
+	outline: none !important;
+		}
+	.go-top:hover
+	{
+		color: #000;
+	}
+  .tieu-de
+  {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    color: #e48e2c;
+
+  }
+  .tieu-de p
+  {
+     margin-bottom: 0px;
+  }
+  .chuong
+  {
+    display: flex;
+    color: white;
+    font-size: 12px;
+    justify-content: space-between;
+  }
+  .img1
+  {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+  }
+  ::-webkit-scrollbar
+  {
+    width: 0;
+  }
+  #scroll-Y
+  {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+  }
+  #progress
+  {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+   /* height: 100%;*/
+    background: linear-gradient(to top,#008aff,#00ffe7);
+    animation: animate 5s linear infinite;
+  }
+  @keyframes animate
+  {
+    0%
+    {
+      filter: hue-rotate(0deg);
+    }
+    50%
+    {
+      filter: hue-rotate(360deg);
+    }
+  }
+  #progress:before
+  {
+      position: absolute;
+      content: '';
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top,#008aff,#00ffe7);
+      filter: blur(10px);
+  }
+  #progress:after
+  {
+      position: absolute;
+      content: '';
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top,#008aff,#00ffe7);
+      filter: blur(30px);
+  }
+  .snow1
+  {
+    background: url(hinh/snow.png);
+    width: 100%;
+    height: 339vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen;
+    background-repeat:  repeat;
+    animation: animeone 10s infinite linear;
+    z-index: -1;
+  }
+   .snow2
+  {
+    background: url(hinh/snow.png);
+    width: 100%;
+    height: 339vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen;
+    background-repeat:  repeat;
+    animation: animeonee 10s infinite linear;
+    z-index: -1;
+  }
+   .snow3
+  {
+    background: url(hinh/snow.png);
+    width: 100%;
+    height: 339vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen;
+    background-repeat:  repeat;
+    animation: animeoneee 10s infinite linear;
+    z-index: -1;
+  }
+  @keyframes animeone
+  {
+      0%
+      {
+        background-position: 0px 0px;
+      }
+       100%
+      {
+        background-position: 1920px 1080px;
+      }
+  }
+@media only screen and (max-width:  992px)
+{
+	.search-box
+	{
+		display: none;
+	}
+	.menu
+	{
+		display: block;
+	}
+	.menu-nav
+	{
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		background-color: pink;
+		top: 0;
+		right: -100%;
+		max-width: 400px;
+		padding: 88px 50px;
+		transition: .3s linear;
+	}
+	.menu-nav a
+	{
+		display: block;
+		margin-top: 20px;
+		font-size: 30px;
+	}
+	.sticky .menu-nav
+	{
+		background-color: #000;
+	}
+	.sticky .menu-nav a:hover
+	{
+		color: red !important;
+	}
+	.menu-nav.active
+	{
+		right: 0;
+	}
+	.menu.active span:nth-child(1)
+	{
+		transform: rotate(-45deg);
+		top: 4px;
+	}
+	.menu.active span:nth-child(2)
+	{
+		opacity: 0;
+	}
+	.menu.active span:nth-child(3)
+	{
+		transform: rotate(45deg);
+		bottom: 14px;
+
+	}
+	.img
+	{
+		display: none;
+	}
+}
+
+@media (max-width: 576px){
+	.img-cuoi img {
+	margin-bottom: 4px;
+	}
+	.text1
+	{
+	 margin-bottom: 3px;
+	}
+
+}
+@media (max-width: 768px){
+   .imgbox {
+    width: 27%;
+    }
+}
+</style>
+<body>
+<div id="progress"></div>
+<div id="scroll-Y"></div>
+<div class="container-fluid nav">
+	<div class="container">
+		<div class="logo">
+			<a href="#" class="logo"></a>
+		</div>
+		<button class="menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<div class="menu-nav">
+			<a href="#">Trang Chủ</a>
+			<a href="#truyen">R18</a>
+			<a href="#tieu-de-cuoi">FANPAGE</a>
+		</div>
+		<div class="search-box">
+			<input type="" name="" placeholder="Tìm Kiếm Manga">
+			<a class="search-btn" href=""><i class="fas fa-search"></i></a>
+		</div>
+	</div>
+</div>
+<div class="img"></div>
+	<div class="container">
+	<div class="swiper-container">
+    <div class="swiper-wrapper">
+	      <div class="swiper-slide"><img src="hinh/8.png">
+          <div class="tieu-de">
+            <div class="noi-dung">
+              <p>Hero-san and Former General-san</p>
+            </div>
+            <div class="chuong">
+              <p>Chương 31</p>
+              <p>34 Ngày</p>
+            </div>
+          </div>
+        </div>
+	      <div class="swiper-slide"><img src="hinh/1.jpeg">
+         <div class="tieu-de">
+            <div class="noi-dung">
+              <p>Hero-san and Former General-san</p>
+            </div>
+            <div class="chuong">
+              <p>Chương 31</p>
+              <p>34 Ngày</p>
+            </div>
+          </div></div>
+	      <div class="swiper-slide"><img src="hinh/2.jpeg">
+         <div class="tieu-de">
+            <div class="noi-dung">
+              <p>Hero-san and Former General-san</p>
+            </div>
+            <div class="chuong">
+              <p>Chương 31</p>
+              <p>34 Ngày</p>
+            </div>
+          </div></div>
+	      <div class="swiper-slide"><img src="hinh/3.jpeg">
+         <div class="tieu-de">
+            <div class="noi-dung">
+              <p>Hero-san and Former General-san</p>
+            </div>
+            <div class="chuong">
+              <p>Chương 31</p>
+              <p>34 Ngày</p>
+            </div>
+          </div></div>
+	       <div class="swiper-slide"><img src="hinh/4.jpeg">
+          <div class="tieu-de">
+            <div class="noi-dung">
+              <p>Hero-san and Former General-san</p>
+            </div>
+            <div class="chuong">
+              <p>Chương 31</p>
+              <p>34 Ngày</p>
+            </div>
+          </div></div>
+	       <div class="swiper-slide"><img src="hinh/5.jpeg">
+          <div class="tieu-de">
+            <div class="noi-dung">
+              <p>Hero-san and Former General-san</p>
+            </div>
+            <div class="chuong">
+              <p>Chương 31</p>
+              <p>34 Ngày</p>
+            </div>
+          </div></div>
+	        <div class="swiper-slide"><img src="hinh/6.jpeg">
+           <div class="tieu-de">
+            <div class="noi-dung">
+              <p>Hero-san and Former General-san</p>
+            </div>
+            <div class="chuong">
+              <p>Chương 31</p>
+              <p>34 Ngày</p>
+            </div>
+          </div></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+ <div class="container" >
+   <div class="ten2">
+    <a href=""><h3>Truyện Đề Xuất :</h3></a> 
+   </div>
+ </div>
+ <div class="container" id="truyen">
+<div class="row">
+  <div class="col-lg-8">
+    <div class="container-fluid">
+      <div class="danhsach-manga">
+        <div class="row">
+          <div class="col-3 col-md-3 img1">
+           <a href="wedtruyen2"><img src="hinh/8.png"></a> 
+          </div>
+          <div class="col-9 col-md-9">
+            <div class="tieude">
+              <a href="wedtruyen2.html"><h2>Hero-san and Former General-san</h2></a>
+            </div>
+            <div class="nhomdich">
+              <span> Luân </span>
+              <br>
+              <span> Luân </span>
+              <div class="theloai">
+               <p class="y">Yuri</p>
+                 <p class="y">Yuri</p>
+                   <p class="y">yuri</p>
+              </div>
+              <div class="noidung">
+                <p>Nội Dung :</p>
+              </div> 
+              <div class="noidung-truyen">
+                <p>tướng quỷ u mê nữ siêu anh hùng nên phản cmnr bội lại tổ chức của mình =="</p>
+              </div>
+            </div>
+              <div class="chap">
+                <a href=""><p>-->Chap 1</p></a>
+              </div> 
+          </div>
+        </div>
+      </div>
+       <div class="danhsach-manga">
+        <div class="row">
+          <div class=" col-3 col-md-3 img1">
+           <a href=""><img src="hinh/8.png"></a> 
+          </div>
+          <div class=" col-9 col-md-9">
+            <div class="tieude">
+              <a href=""><h2>Hero-san and Former General-san</h2></a>
+            </div>
+            <div class="nhomdich">
+              <span> Luân </span>
+              <br>
+              <span> Luân </span>
+              <div class="theloai">
+               <p class="y">Yuri</p>
+                 <p class="y">Yuri</p>
+                   <p class="y">yuri</p>
+              </div>
+              <div class="noidung">
+                <p>Nội Dung :</p>
+              </div> 
+              <div class="noidung-truyen">
+                <p>tướng quỷ u mê nữ siêu anh hùng nên phản cmnr bội lại tổ chức của mình =="</p>
+              </div>
+            </div>
+              <div class="chap">
+                <a href=""><p>-->Chap 1</p></a>
+              </div> 
+          </div>
+        </div>
+      </div>
+       <div class="danhsach-manga">
+        <div class="row">
+          <div class=" col-3 col-md-3 img1">
+           <a href=""><img src="hinh/8.png"></a> 
+          </div>
+          <div class=" col-9 col-md-9">
+            <div class="tieude">
+              <a href=""><h2>Hero-san and Former General-san</h2></a>
+            </div>
+            <div class="nhomdich">
+              <span> Luân </span>
+              <br>
+              <span> Luân </span>
+              <div class="theloai">
+               <p class="y">Yuri</p>
+                 <p class="y">Yuri</p>
+                   <p class="y">yuri</p>
+              </div>
+              <div class="noidung">
+                <p>Nội Dung :</p>
+              </div> 
+              <div class="noidung-truyen">
+                <p>tướng quỷ u mê nữ siêu anh hùng nên phản cmnr bội lại tổ chức của mình =="</p>
+              </div>
+            </div>
+              <div class="chap">
+                <a href=""><p>-->Chap 1</p></a>
+              </div> 
+          </div>
+        </div>
+      </div>
+       <div class="danhsach-manga">
+        <div class="row">
+          <div class="col-3 col-md-3 img1">
+           <a href=""><img src="hinh/8.png"></a> 
+          </div>
+          <div class="col-9 col-md-9">
+            <div class="tieude">
+              <a href=""><h2>Hero-san and Former General-san</h2></a>
+            </div>
+            <div class="nhomdich">
+              <span> Luân </span>
+              <br>
+              <span> Luân </span>
+              <div class="theloai">
+               <p class="y">Yuri</p>
+                 <p class="y">Yuri</p>
+                   <p class="y">yuri</p>
+              </div>
+              <div class="noidung">
+                <p>Nội Dung :</p>
+              </div> 
+              <div class="noidung-truyen">
+                <p>tướng quỷ u mê nữ siêu anh hùng nên phản cmnr bội lại tổ chức của mình =="</p>
+              </div>
+            </div>
+              <div class="chap">
+                <a href=""><p>-->Chap 1</p></a>
+              </div>
+          </div>
+        </div>
+      </div>
+       <div class="danhsach-manga">
+        <div class="row">
+          <div class="col-3 col-md-3 img1">
+           <a href=""><img src="hinh/8.png"></a> 
+          </div>
+          <div class="col-9 col-md-9">
+            <div class="tieude">
+              <a href=""><h2>Hero-san and Former General-san</h2></a>
+            </div>
+            <div class="nhomdich">
+              <span> Luân </span>
+              <br>
+              <span> Luân </span>
+              <div class="theloai">
+               <p class="y">Yuri</p>
+                 <p class="y">Yuri</p>
+                   <p class="y">yuri</p>
+              </div>
+              <div class="noidung">
+                <p>Nội Dung :</p>
+              </div> 
+              <div class="noidung-truyen">
+                <p>tướng quỷ u mê nữ siêu anh hùng nên phản cmnr bội lại tổ chức của mình =="</p>
+              </div>
+            </div>
+              <div class="chap">
+                <a href=""><p>-->Chap 1</p></a>
+              </div> 
+          </div>
+        </div>
+      </div>
+       <div class="danhsach-manga">
+        <div class="row">
+          <div class="col-3 col-md-3 img1">
+           <a href=""><img src="hinh/8.png"></a> 
+          </div>
+          <div class="col-9 col-md-9">
+            <div class="tieude">
+              <a href=""><h2>Hero-san and Former General-san</h2></a>
+            </div>
+            <div class="nhomdich">
+              <span> Luân </span>
+              <br>
+              <span> Luân </span>
+              <div class="theloai">
+               <p class="y">Yuri</p>
+                 <p class="y">Yuri</p>
+                   <p class="y">yuri</p>
+              </div>
+              <div class="noidung">
+                <p>Nội Dung :</p>
+              </div> 
+              <div class="noidung-truyen">
+                <p>tướng quỷ u mê nữ siêu anh hùng nên phản cmnr bội lại tổ chức của mình =="</p>
+              </div>
+            </div>
+              <div class="chap">
+                <a href=""><p>-->Chap 1</p></a>
+              </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="container-fluid">
+      <div class="benphai">
+        <div class="bxh">
+          <h3>Bảng Xếp Hạng</h3>
+          <button id="btn"><i class="fas fa-chevron-up"></i></button>
+        </div>
+        <div class="bxh-truyen">
+          <ul class="andi1">
+          <li>
+            <div class="sua">
+            <p class="so1">1</p>
+            <div class="imgbox">
+              <img src="hinh/8.png">
+            </div>
+            <div class="title">
+             <span>Hero-san and Former General-san</span>
+             <br>
+              <span>Lượt Xem :1 triệu</span>
+              <br>
+               <span>Tác Giả :Luân</span>
+               <br>
+               <span>-->Chap 1</span>
+            </div>
+            </div>
+          </li>
+          <hr>
+           <li>
+           <li>
+            <div class="sua">
+            <p class="so2">2</p>
+            <div class="imgbox">
+              <img src="hinh/8.png">
+            </div>
+            <div class="title">
+             <span>Hero-san and Former General-san</span>
+             <br>
+              <span>Lượt Xem :1 triệu</span>
+              <br>
+               <span>Tác Giả :Luân</span>
+               <br>
+               <span>-->Chap 1</span>
+            </div>
+            </div>
+          </li>
+          </li>
+          <hr>
+           <li>
+            <li>
+            <div class="sua">
+            <p class="so3">3</p>
+            <div class="imgbox">
+              <img src="hinh/8.png">
+            </div>
+            <div class="title">
+             <span>Hero-san and Former General-san</span>
+             <br>
+              <span>Lượt Xem :1 triệu</span>
+              <br>
+               <span>Tác Giả :Luân</span>
+               <br>
+               <span>-->Chap 1</span>
+            </div>
+            </div>
+          </li>
+          </li>
+          <hr>
+           <li>
+            <li>
+            <div class="sua">
+            <p class="so4">4</p>
+            <div class="imgbox">
+              <img src="hinh/8.png">
+            </div>
+            <div class="title">
+             <span>Hero-san and Former General-san</span>
+             <br>
+              <span>Lượt Xem :1 triệu</span>
+              <br>
+               <span>Tác Giả :Luân</span>
+               <br>
+               <span>-->Chap 1</span>
+            </div>
+            </div>
+          </li>
+          </li>
+          <hr>
+           <li>
+            <li>
+            <div class="sua">
+            <p class="so5">5</p>
+            <div class="imgbox">
+              <img src="hinh/8.png">
+            </div>
+            <div class="title">
+             <span>Hero-san and Former General-san</span>
+             <br>
+              <span>Lượt Xem :1 triệu</span>
+              <br>
+               <span>Tác Giả :Luân</span>
+               <br>
+               <span>-->Chap 1</span>
+            </div>
+            </div>
+          </li>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="container-fluid bg-dark" id="tieu-de-cuoi">
+	 <div class="container">
+   <div class="row">
+      <div class="col-md-3 img-cuoi text-center">
+        <img src="hinh/logo.png">
+      <p class="text-white  text-center text1">Copyrights @ 2020 YuriNeKo</p>
+      </div>
+      <div class="col-md-6 text-center cuoi-giua">
+        <a href="" class="text-white">Về Chúng Tôi</a>
+        <span class="daugach"></span>
+        <a href="" class="text-white">Điều Khoản</a>
+        <span class="daugach"></span>
+        <a href="" class="text-white">FAQ</a>
+        <span class="daugach"></span>
+        <a href="" class="text-white">Liên Hệ</a>
+        <span class="daugach"></span>
+      </div>
+      <div class="col-md-3 text-center cuoi-cung">
+        <span class="text-white ">Follow us at:</span>
+        <a href=""><i class="fab fa-facebook-f text-white"></i></a>
+        <a href=""><i class="fab fa-youtube text-white"></i></a>
+        <a href=""><i class="fab fa-google-plus-g text-white"></i></a>
+      </div>
+   </div>
+   </div>
+</div>
+<button class="go-top fas fa-arrow-up"></button>
+<div class="snow1"></div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ 	<script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: false,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 200,
+        edit : 1 ,
+        slideShadows: true,
+      } ,
+      loop: true,
+      autoplay: {
+        delay: 500,
+        disableOnInteraction: false,
+      } ,
+    } ) ;
+  </script>
+  <script type="text/javascript">
+    let progress = document.getElementById('progress');
+    let totalHeight = document.body.scrollHeight - window.innerHeight;
+    window.onscroll = function(){
+    let progressHeight = (window.pageYOffset / totalHeight ) * 100;
+      progress.style.height = progressHeight + "%";
+    }
+  </script>
+</body>
+</html>

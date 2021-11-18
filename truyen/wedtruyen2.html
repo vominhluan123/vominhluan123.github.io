@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebTruyen</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/db0786b046.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 200){
+          $('.thanhcuon').fadeIn();
+        }else{
+          $('.thanhcuon').fadeOut();
+        } 
+      });
+     $('.thanhcuon').click(function(){
+          $('html,body').animate({scrollTop: 0},5000);
+      });
+     $(document).ready(function(){
+  $("button").click(function(){
+    $('.fa-chevron-up').toggleClass('clicked');
+    $('.andi').toggle(500);
+  });
+});
+    });
+     $(document).ready(function(){
+      $('.btn-theodoi').click(function(){
+        $('.btn-theodoi').toggleClass('icon1');
+      })
+     })
+  </script>
+</head>
+<body>
+	<style type="text/css">
+	
+*{
+	box-sizing: border-box;
+  clear: both;
+}
+.navbar
+{
+  display: flex;
+
+}
+.navbar-brand img
+{
+  width: 150px;
+}
+.chinhsua img {
+	width: 100px;
+	height: 100px;
+}
+
+.manga-fitter img {
+	width: 100%;
+	height: 800px;
+	filter: blur(5px);
+	margin-top: 15px;
+}
+.manga{
+  	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  	padding: 10px 40px !important;
+    border-radius: 5px;
+    margin-top: -30%;
+    position: relative;
+    background: white;
+    margin-bottom: 50px;
+   }
+   .chinh{
+   	width: 100%;
+   	margin-top: 15px;
+   	margin-left: 7px;
+   }
+   .btn a {
+   	padding: 2px 10px;
+    font-size: 15px;
+   	color: white;
+   	display: inline-block;
+   	background-color: #b7bfca;
+   	margin: 3px 1px 3px 0px;
+   	border-radius: 3px
+   }
+   
+   
+   .row h2{
+   	margin-top: 15px;
+   }
+   .btn-chap{
+   	padding: 2px 10px;
+    font-size: 15px;
+   	color: white;
+   	display: inline-block;
+   	background-color: #e48e2c;
+   	margin: 3px 1px 3px 0px;
+   	border-radius: 3px
+
+   }
+   .btn-chap:hover{
+   	background-color: #fff;
+   	color:  #e48e2c;
+
+   }
+   .chap-moi{
+	   padding: 2px 10px;
+    font-size: 15px;
+   	color: white;
+   	display: inline-block;
+   	background-color: #e48e2c;
+   	margin: 3px 1px 3px 0px;
+   	border-radius: 3px
+   }
+    .chap-moi:hover{
+    background-color: #fff;
+   	color:  #e48e2c;
+    }
+    .chise{
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    }
+   .btn-theodoi
+   {
+     position: relative;
+     min-width: 150px;
+     outline: none;
+     border-radius: 5px;
+     border: 2px solid #e48e2c;
+     background: transparent;
+     margin-bottom: 5px;
+     transition: .5s;
+   }
+   .btn-theodoi span
+   {
+     color: #e48e2c;
+   }
+   .btn-theodoi.icon1::before
+   {
+    content: "Huy Theo Doi";
+     position: absolute;
+     color: #fff;
+   }
+   .btn-theodoi.icon1 img
+   {
+     opacity: 0;
+   }
+   .btn-theodoi.icon1
+   {
+     background: #e48e2c;
+   }
+    .cuoi{
+    	font-size: 30px;
+    }
+    .ten{
+    	margin-top: 15px;
+    }
+    .title{
+    	color: #e48e2c;
+    	font-weight: 700
+    }
+    .lon-nho{
+    	align-items: center;
+    	font-size: 25px;
+    	color: #e48e2c;
+    	float: right;
+    }
+    button{
+      background-color: transparent;
+      align-items: center;
+      justify-content: center;
+      outline: none !important;
+      border: none;
+    }
+     .fa-sort-amount-up
+      {
+      color: #e48e2c;
+      margin-left: 15px;
+      }
+    #all-chap{
+      max-height: 700px;
+      width: 100%;
+      background-color: transparent;
+      list-style: none;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+  #all-chap li{
+      margin-top: 7px;
+      padding: 12px;
+      color: #e48e2c;
+      margin-bottom: 10px;
+      background-color: #ececec;
+       }
+       .item {
+        background-color: transparent;
+       }
+   
+  body{
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  }
+::-webkit-scrollbar
+{
+  width: 12px;
+}
+::-webkit-scrollbar-thumb
+{
+background: linear-gradient(transparent,#30ff00);
+border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover
+{
+background: linear-gradient(transparent,#00c6ff);
+}
+.thanhcuon
+{
+  position: fixed;
+  bottom: 80px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #F37B87;
+  background-color: white;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.thanhcuon:hover
+{
+  color: #00c6ff;
+}
+.benphai{
+  padding-top: 1px;
+  padding-right: 15px;
+  margin-top: 54px;
+  padding-left: 15px;
+  width: 100%
+  height 700px;
+  background-color: white;
+  list-style: none;
+}
+.col-md-3 h2{
+    color:  #e48e2c;
+}
+.benphai li
+{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 46px;
+  padding: 15px;
+  background-color: #ccc
+
+}
+.fa-comments
+{
+  margin: 5px;
+  padding: 5px;
+  font-size: 25px;
+  color: #e48e2c;
+}
+.fa-smile{
+  padding: 2px;
+  border: 1px solid  #e48e2c;
+  border-radius: 5px;
+  color: #000;
+}
+.fa-paper-plane {
+  padding: 2px;
+  border: 1px solid  #e48e2c;
+  border-radius: 5px;
+  color: #000;
+}
+.container textarea{
+     border: 1px solid  #e48e2c;
+     border-radius:  5px;
+    width: 100%;
+    height: 70px;
+}
+.i-con
+{
+    position: relative;
+    top: -30px;
+    margin-left:5px; 
+}
+.img-box img 
+{
+  margin-right: 15px;
+  width: 50px;
+ 
+}
+.comment
+{
+  margin-bottom: 10px;
+}
+.comment1
+{
+  display: flex;
+}
+.binh-luan
+{
+    background-color: #ffffff;
+    width: 100%;
+    border: 1px solid #e48e2c;
+    padding: 5px;
+}
+.binh-luan1
+{
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.binh-luan2
+{
+  font-size: 24px;
+  color: #535c68;
+  padding-left: 10px;
+}
+.daugach{
+    width: 1px;
+    height: 24px;
+    display: inline-block;
+    background-color: #F88379;
+
+}
+.img-cuoi img
+{
+  width: 150px;
+  text-align: center;
+}
+.tieu-de-cuoi
+{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+.menu
+{
+  background-color: pink;
+}
+
+@media (max-width: 543px)
+{
+  .i-con
+  {
+    position: relative;
+    top: 10;
+  }
+}
+@media (max-width: 543px)
+{
+  .an
+  {
+    display: none;
+  }
+  .an1{
+    display: none;
+  }
+}
+
+</style>
+<header>
+  <div class="container-fluid menu">
+  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-pink">
+  <a class="navbar-brand" href="wedtruyen.html"><img src="hinh/logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">DANH MỤC</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">R18</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#">FANPAGE</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="Tìm Kiếm Manga..."><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+</nav>
+  </div>
+  </div>
+  </header>
+	<div class="container-fluid manga-fitter p-0">
+		<img src="hinh/8.png">
+	</div>
+	<div class="container">
+		<div class="manga">
+			<div class="row">
+				<div class="col-md-3">
+					<img src="hinh/8.png" class="chinh">
+				</div>
+				<div class="col-md-6">
+					<h2>Hero-san and Former General-san</h2>
+					<span>Đang tiến hành</span>
+					<h3>Tên khác : <span>Hero-san and Former General-san</span></h3>
+					<h4>Lượt xem : <span>1 triệu</span></h4>
+					<div class="btn">
+						<a href="#">Comedy</a>
+						<a href="#">Ecchi</a>
+						<a href="#">Yuri</a>
+						<a href="#">Hay</a>
+
+					</div>
+					<p>Tóm tắt nội dung</p>
+					<span>tướng quỷ u mê nữ siêu anh hùng nên phản cmnr bội lại tổ chức của mình =="</span>
+          <div>
+          <button class="btn-theodoi">
+            <img src="hinh/add.png">
+            <span>Theo doi</span>
+          </button>
+        </div>
+					<div class="btn-chap">
+						<span>Đọc từ đầu</span>
+						
+					</div>
+					<span class="chap-moi">Chap mới nhất</span>
+					
+				</div>
+				<div class="col-md-3">
+					<p class="ten">Chia Sẻ :</p>
+					<div class="chise">
+					<div class="cuoi">
+					<i class="fab fa-facebook-square"></i>
+					<i class="fab fa-facebook-messenger"></i>
+					<i class="far fa-copy"></i>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+		<h3 class="title"><i class="fas fa-book"></i>Danh Sách Chương</h3>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+		<div class="lon-nho">
+		<button onclick="w3.sortHTML('#all-chap','li')"><i class="fas fa-sort-amount-up"></i><</button>
+		</div>
+    <ul id="all-chap">
+      <li>Chap 1</li>
+      <li>Chap 2</li>
+      <li>Chap 3</li>
+      <li>Chap 4</li>
+      <li>Chap 5</li>
+      <li>Chap 6</li>
+      <li>Chap 7</li>
+      <li>Chap 8</li>
+      <li>Chap 9</li>
+      <li>Chap 10</li>
+      <li>Chap 11</li>
+      <li>Chap 12</li>
+      <li>Chap 13</li>
+      <li>Chap 14</li>
+      <li>Chap 15</li>
+      <li>Chap 16</li>
+      <li>Chap 17</li>
+      <li>Chap 18</li>
+      <li>Chap 19</li>
+      <li>Chap 20</li>
+      <li>Chap 21</li>
+      <li>Chap 22</li>
+    </ul>
+		</div>
+    <div class="col-md-3">
+       <h2>Cùng Tác Giả:</h2>
+      <ul class="benphai">
+       <li>
+        <span>Hero-san and Former General-san</span>
+        <span>Chương 1</span>
+       </li>
+       <hr>
+         <li>
+        <span>Hero-san and Former General-san</span>
+          <span>Chương 2</span>
+       </li>
+        <hr>
+         <li>
+        <span>Hero-san and Former General-san</span>
+         <span>Chương 3</span>
+       </li>
+        <hr>
+         <li>
+        <span>Hero-san and Former General-san</span>
+         <span>Chương 4</span>
+       </li>
+        <hr>
+       </ul>
+
+     
+    </div>
+		</div>
+    <div class="container">
+      <i class="far fa-comments">Bình Luận</i>
+    </div>
+    <div class="container">
+      <textarea></textarea>
+    </div>
+    <div class="container i-con">
+       <i class="far fa-smile"></i>
+      <i class="far fa-paper-plane"></i>
+    </div>
+		
+	</div>
+</div>
+<div class="container comment">
+  <div class="comment1">
+    <div class="img-box">
+      <img src="hinh/651.jpeg">
+    </div>
+    <div class="binh-luan">
+      <p class="binh-luan1">
+        <span>68 Ngày Trước</span>
+      </p>
+      <p class="binh-luan2">
+        <span>Hay</span>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container comment">
+  <div class="comment1">
+    <div class="img-box">
+      <img src="hinh/651.jpeg">
+    </div>
+    <div class="binh-luan">
+      <p class="binh-luan1">
+        <span>68 Ngày Trước</span>
+      </p>
+      <p class="binh-luan2">
+        <span>Hay</span>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container comment">
+  <div class="comment1">
+    <div class="img-box">
+      <img src="hinh/651.jpeg">
+    </div>
+    <div class="binh-luan">
+      <p class="binh-luan1">
+        <span>68 Ngày Trước</span>
+      </p>
+      <p class="binh-luan2">
+        <span>Hay</span>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container comment">
+  <div class="comment1">
+    <div class="img-box">
+      <img src=hinh/651.jpeg>
+    </div>
+    <div class="binh-luan">
+      <p class="binh-luan1">
+        <span>68 Ngày Trước</span>
+      </p>
+      <p class="binh-luan2">
+        <span>Hay</span>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container comment">
+  <div class="comment1">
+    <div class="img-box">
+      <img src="hinh/651.jpeg">
+    </div>
+    <div class="binh-luan">
+      <p class="binh-luan1">
+        <span>68 Ngày Trước</span>
+      </p>
+      <p class="binh-luan2">
+        <span>Hay</span>
+      </p>
+    </div>
+  </div>
+</div>
+   <div class="container-fluid bg-dark tieu-de-cuoi">
+    <div class="container p-0">
+   <div class="row">
+      <div class="col-md-3 img-cuoi text-center">
+        <img src="hinh/logo.png">
+      <p class="text-white  text-center">Copyrights @ 2020 YuriNeKo</p>
+      </div>
+      <div class="col-md-6 text-center cuoi-giua">
+        <a href="" class="text-white">Về Chúng Tôi</a>
+        <span class="daugach"></span>
+        <a href="" class="text-white">Điều Khoản</a>
+        <span class="daugach"></span>
+        <a href="" class="text-white">FAQ</a>
+        <span class="daugach"></span>
+        <a href="" class="text-white">Liên Hệ</a>
+        <span class="daugach"></span>
+      </div>
+      <div class="col-md-3 text-center">
+        <span class="text-white ">Follow us at:</span>
+        <a href=""><i class="fab fa-facebook-f text-white"></i></a>
+        <a href=""><i class="fab fa-youtube text-white"></i></a>
+        <a href=""><i class="fab fa-google-plus-g text-white"></i></a>
+      </div>
+   </div>
+   </div>
+  </div>
+<a href="" class="thanhcuon"><i class="fas fa-arrow-up"></i></a>
+
+</body>
+</html>
